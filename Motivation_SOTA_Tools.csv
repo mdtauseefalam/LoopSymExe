@@ -1,0 +1,6 @@
+filename,basename,toolid,toolmode,parser_version,runid,start,duration,exit_code,findings,infos,errors,fails
+samples/Motivation.sol,Motivation.sol,mythril-0.23.15,solidity,2023/01/20,20250129_0731,1738135919.797041,15.836579084396362,0,{},{},{},{}
+samples/Motivation.sol,Motivation.sol,osiris,solidity,2023/02/27,20250129_0733,1738135983.207936,2.2427141666412354,0,{},{},{},{}
+samples/Motivation.sol,Motivation.sol,oyente,solidity,2023/02/27,20250129_0732,1738135948.419727,1.8518080711364746,0,{},{},{},{}
+samples/Motivation.sol,Motivation.sol,slither,solidity,2022/11/14,20250129_0732,1738135962.411066,0.9529187679290771,1,{solc_version},{},{EXIT_CODE_1},{}
+samples/Motivation.sol,Motivation.sol,smartcheck,solidity,2022/11/14,20250129_0731,1738135903.007415,4.385777950286865,0,{SOLIDITY_PRAGMAS_VERSION},{},{},{}
