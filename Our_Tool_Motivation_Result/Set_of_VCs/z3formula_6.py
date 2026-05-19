@@ -1,0 +1,21 @@
+from z3 import *
+b_1 = Real('b_1')
+mul_0 = Real('mul_0')
+a_0 = Real('a_0')
+mul_2 = Real('mul_2')
+b_2 = Real('b_2')
+mul_1 = Real('mul_1')
+b_7 = Real('b_7')
+b_0 = Real('b_0')
+b_3 = Real('b_3')
+b_6 = Real('b_6')
+b_5 = Real('b_5')
+b_4 = Real('b_4')
+s = Solver()
+s.add(Not(Implies(And(And(And(And(And(And(And(And(And(And(And(And(And(And(And(And(And(And(True,And( 0 >= a_0, a_0 <= 4294967295)),And( 0 >= b_0, b_0 <= 4294967295)),And( 0 >= mul_0, mul_0 <= 4294967295)),a_0 >= 0),b_0 >= 0),a_0 == 0),a_0 == 1),b_7 == 10000),b_6 == b_7),b_2 == b_6),b_3 == b_2),mul_1 == mul_0),b_3 > 500),mul_2 == mul_1 + a_0 * b_3),b_4 == b_3/2),b_3 == b_4),mul_1 == mul_2),b_3 > 500),b_3 > 11000)))
+r = s.check()
+if str(r) == "unsat":
+    print("looksgood")
+else:
+    print("cannotsay")
+    print(s.model())

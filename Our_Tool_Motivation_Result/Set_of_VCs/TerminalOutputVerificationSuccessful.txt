@@ -1,0 +1,220 @@
+PS G:\Study\ResearchWork\LITERATURE STUDY IITP\FM_Solidity\CODE\Copy(SolidityCodeAnalysisFramework)\SolidityCodeAnalysisFramework> python  .\Z3Formatter.py     
+SourceUnit - INFO - processing SourceUnit -2024-11-07 12:56:16,166
+ContractDefinition - INFO - processing ContractDefinition77 -2024-11-07 12:56:16,167
+VariableDeclaration - INFO - processing VariableDeclaration3 -2024-11-07 12:56:16,167
+VariableDeclaration - INFO - processing VariableDeclaration5 -2024-11-07 12:56:16,168
+VariableDeclaration - INFO - processing VariableDeclaration5 -2024-11-07 12:56:16,168
+VariableDeclaration - INFO - processing VariableDeclaration8 -2024-11-07 12:56:16,168
+VariableDeclaration - INFO - processing VariableDeclaration8 -2024-11-07 12:56:16,168
+VariableDeclaration - INFO - processing VariableDeclaration8 -2024-11-07 12:56:16,168
+Block - INFO - processing Block75 -2024-11-07 12:56:16,169
+VariableDeclarationStatement - INFO - processing VariableDeclarationStatement12 -2024-11-07 12:56:16,169
+VariableDeclaration - INFO - processing VariableDeclaration11 -2024-11-07 12:56:16,170
+VariableDeclaration - INFO - processing VariableDeclaration11 -2024-11-07 12:56:16,170
+VariableDeclaration - INFO - processing VariableDeclaration11 -2024-11-07 12:56:16,170
+VariableDeclaration - INFO - processing VariableDeclaration11 -2024-11-07 12:56:16,170
+ExpressionStatement - INFO - processing ExpressionStatement18 -2024-11-07 12:56:16,170
+FunctionCall - INFO - processing FunctionCall17 -2024-11-07 12:56:16,171
+BinaryOperation - INFO - processing BinaryOperation16 -2024-11-07 12:56:16,171
+ExpressionStatement - INFO - processing ExpressionStatement24 -2024-11-07 12:56:16,171
+ExpressionStatement - INFO - processing ExpressionStatement24 -2024-11-07 12:56:16,171
+FunctionCall - INFO - processing FunctionCall23 -2024-11-07 12:56:16,171
+FunctionCall - INFO - processing FunctionCall23 -2024-11-07 12:56:16,171
+BinaryOperation - INFO - processing BinaryOperation22 -2024-11-07 12:56:16,172
+BinaryOperation - INFO - processing BinaryOperation22 -2024-11-07 12:56:16,172
+IfStatement - INFO - processing IfStatement47 -2024-11-07 12:56:16,172
+BinaryOperation - INFO - processing BinaryOperation27 -2024-11-07 12:56:16,172
+BinaryOperation - INFO - processing BinaryOperation27 -2024-11-07 12:56:16,172
+BinaryOperation - INFO - processing BinaryOperation27 -2024-11-07 12:56:16,172
+Block - INFO - processing Block32 -2024-11-07 12:56:16,173
+Block - INFO - processing Block32 -2024-11-07 12:56:16,173
+ExpressionStatement - INFO - processing ExpressionStatement31 -2024-11-07 12:56:16,174
+ExpressionStatement - INFO - processing ExpressionStatement31 -2024-11-07 12:56:16,174
+ExpressionStatement - INFO - processing ExpressionStatement31 -2024-11-07 12:56:16,174
+Assignment - INFO - processing Assignment30 -2024-11-07 12:56:16,174
+IfStatement - INFO - processing IfStatement46 -2024-11-07 12:56:16,175
+IfStatement - INFO - processing IfStatement46 -2024-11-07 12:56:16,175
+BinaryOperation - INFO - processing BinaryOperation35 -2024-11-07 12:56:16,175
+BinaryOperation - INFO - processing BinaryOperation35 -2024-11-07 12:56:16,175
+BinaryOperation - INFO - processing BinaryOperation35 -2024-11-07 12:56:16,175
+BinaryOperation - INFO - processing BinaryOperation35 -2024-11-07 12:56:16,175
+Block - INFO - processing Block40 -2024-11-07 12:56:16,176
+Block - INFO - processing Block40 -2024-11-07 12:56:16,176
+Block - INFO - processing Block40 -2024-11-07 12:56:16,176
+ExpressionStatement - INFO - processing ExpressionStatement39 -2024-11-07 12:56:16,177
+ExpressionStatement - INFO - processing ExpressionStatement39 -2024-11-07 12:56:16,177
+ExpressionStatement - INFO - processing ExpressionStatement39 -2024-11-07 12:56:16,177
+ExpressionStatement - INFO - processing ExpressionStatement39 -2024-11-07 12:56:16,177
+Assignment - INFO - processing Assignment38 -2024-11-07 12:56:16,178
+Assignment - INFO - processing Assignment38 -2024-11-07 12:56:16,178
+Block - INFO - processing Block45 -2024-11-07 12:56:16,179
+Block - INFO - processing Block45 -2024-11-07 12:56:16,179
+Block - INFO - processing Block45 -2024-11-07 12:56:16,179
+Block - INFO - processing Block45 -2024-11-07 12:56:16,179
+ExpressionStatement - INFO - processing ExpressionStatement44 -2024-11-07 12:56:16,180
+ExpressionStatement - INFO - processing ExpressionStatement44 -2024-11-07 12:56:16,180
+ExpressionStatement - INFO - processing ExpressionStatement44 -2024-11-07 12:56:16,180
+ExpressionStatement - INFO - processing ExpressionStatement44 -2024-11-07 12:56:16,180
+ExpressionStatement - INFO - processing ExpressionStatement44 -2024-11-07 12:56:16,180
+Assignment - INFO - processing Assignment43 -2024-11-07 12:56:16,180
+Assignment - INFO - processing Assignment43 -2024-11-07 12:56:16,180
+Assignment - INFO - processing Assignment43 -2024-11-07 12:56:16,180
+WhileStatement - INFO - processing WhileStatement66 -2024-11-07 12:56:16,181
+BinaryOperation - INFO - processing BinaryOperation50 -2024-11-07 12:56:16,181
+BinaryOperation - INFO - processing BinaryOperation50 -2024-11-07 12:56:16,181
+BinaryOperation - INFO - processing BinaryOperation50 -2024-11-07 12:56:16,181
+BinaryOperation - INFO - processing BinaryOperation50 -2024-11-07 12:56:16,181
+BinaryOperation - INFO - processing BinaryOperation50 -2024-11-07 12:56:16,181
+Block - INFO - processing Block65 -2024-11-07 12:56:16,181
+Block - INFO - processing Block65 -2024-11-07 12:56:16,181
+Block - INFO - processing Block65 -2024-11-07 12:56:16,181
+Block - INFO - processing Block65 -2024-11-07 12:56:16,181
+Block - INFO - processing Block65 -2024-11-07 12:56:16,181
+ExpressionStatement - INFO - processing ExpressionStatement58 -2024-11-07 12:56:16,182
+ExpressionStatement - INFO - processing ExpressionStatement58 -2024-11-07 12:56:16,182
+ExpressionStatement - INFO - processing ExpressionStatement58 -2024-11-07 12:56:16,182
+ExpressionStatement - INFO - processing ExpressionStatement58 -2024-11-07 12:56:16,182
+ExpressionStatement - INFO - processing ExpressionStatement58 -2024-11-07 12:56:16,182
+ExpressionStatement - INFO - processing ExpressionStatement58 -2024-11-07 12:56:16,182
+Assignment - INFO - processing Assignment57 -2024-11-07 12:56:16,183
+Assignment - INFO - processing Assignment57 -2024-11-07 12:56:16,183
+Assignment - INFO - processing Assignment57 -2024-11-07 12:56:16,183
+Assignment - INFO - processing Assignment57 -2024-11-07 12:56:16,183
+BinaryOperation - INFO - processing BinaryOperation56 -2024-11-07 12:56:16,184
+BinaryOperation - INFO - processing BinaryOperation56 -2024-11-07 12:56:16,184
+BinaryOperation - INFO - processing BinaryOperation56 -2024-11-07 12:56:16,184
+BinaryOperation - INFO - processing BinaryOperation56 -2024-11-07 12:56:16,184
+BinaryOperation - INFO - processing BinaryOperation56 -2024-11-07 12:56:16,184
+BinaryOperation - INFO - processing BinaryOperation56 -2024-11-07 12:56:16,184
+BinaryOperation - INFO - processing BinaryOperation55 -2024-11-07 12:56:16,184
+BinaryOperation - INFO - processing BinaryOperation55 -2024-11-07 12:56:16,184
+BinaryOperation - INFO - processing BinaryOperation55 -2024-11-07 12:56:16,184
+BinaryOperation - INFO - processing BinaryOperation55 -2024-11-07 12:56:16,184
+BinaryOperation - INFO - processing BinaryOperation55 -2024-11-07 12:56:16,184
+BinaryOperation - INFO - processing BinaryOperation55 -2024-11-07 12:56:16,184
+BinaryOperation - INFO - processing BinaryOperation55 -2024-11-07 12:56:16,184
+ExpressionStatement - INFO - processing ExpressionStatement64 -2024-11-07 12:56:16,185
+ExpressionStatement - INFO - processing ExpressionStatement64 -2024-11-07 12:56:16,185
+ExpressionStatement - INFO - processing ExpressionStatement64 -2024-11-07 12:56:16,185
+ExpressionStatement - INFO - processing ExpressionStatement64 -2024-11-07 12:56:16,185
+ExpressionStatement - INFO - processing ExpressionStatement64 -2024-11-07 12:56:16,185
+ExpressionStatement - INFO - processing ExpressionStatement64 -2024-11-07 12:56:16,185
+ExpressionStatement - INFO - processing ExpressionStatement64 -2024-11-07 12:56:16,185
+Assignment - INFO - processing Assignment63 -2024-11-07 12:56:16,186
+Assignment - INFO - processing Assignment63 -2024-11-07 12:56:16,186
+Assignment - INFO - processing Assignment63 -2024-11-07 12:56:16,186
+Assignment - INFO - processing Assignment63 -2024-11-07 12:56:16,186
+Assignment - INFO - processing Assignment63 -2024-11-07 12:56:16,186
+BinaryOperation - INFO - processing BinaryOperation62 -2024-11-07 12:56:16,214
+BinaryOperation - INFO - processing BinaryOperation62 -2024-11-07 12:56:16,214
+BinaryOperation - INFO - processing BinaryOperation62 -2024-11-07 12:56:16,214
+BinaryOperation - INFO - processing BinaryOperation62 -2024-11-07 12:56:16,214
+BinaryOperation - INFO - processing BinaryOperation62 -2024-11-07 12:56:16,214
+BinaryOperation - INFO - processing BinaryOperation62 -2024-11-07 12:56:16,214
+BinaryOperation - INFO - processing BinaryOperation62 -2024-11-07 12:56:16,214
+BinaryOperation - INFO - processing BinaryOperation62 -2024-11-07 12:56:16,214
+ExpressionStatement - INFO - processing ExpressionStatement72 -2024-11-07 12:56:16,216
+ExpressionStatement - INFO - processing ExpressionStatement72 -2024-11-07 12:56:16,216
+ExpressionStatement - INFO - processing ExpressionStatement72 -2024-11-07 12:56:16,216
+ExpressionStatement - INFO - processing ExpressionStatement72 -2024-11-07 12:56:16,216
+ExpressionStatement - INFO - processing ExpressionStatement72 -2024-11-07 12:56:16,216
+ExpressionStatement - INFO - processing ExpressionStatement72 -2024-11-07 12:56:16,216
+ExpressionStatement - INFO - processing ExpressionStatement72 -2024-11-07 12:56:16,216
+ExpressionStatement - INFO - processing ExpressionStatement72 -2024-11-07 12:56:16,216
+FunctionCall - INFO - processing FunctionCall71 -2024-11-07 12:56:16,217
+FunctionCall - INFO - processing FunctionCall71 -2024-11-07 12:56:16,217
+FunctionCall - INFO - processing FunctionCall71 -2024-11-07 12:56:16,217
+BinaryOperation - INFO - processing BinaryOperation70 -2024-11-07 12:56:16,218
+BinaryOperation - INFO - processing BinaryOperation70 -2024-11-07 12:56:16,218
+BinaryOperation - INFO - processing BinaryOperation70 -2024-11-07 12:56:16,218
+BinaryOperation - INFO - processing BinaryOperation70 -2024-11-07 12:56:16,218
+BinaryOperation - INFO - processing BinaryOperation70 -2024-11-07 12:56:16,218
+BinaryOperation - INFO - processing BinaryOperation70 -2024-11-07 12:56:16,218
+BinaryOperation - INFO - processing BinaryOperation70 -2024-11-07 12:56:16,218
+BinaryOperation - INFO - processing BinaryOperation70 -2024-11-07 12:56:16,218
+BinaryOperation - INFO - processing BinaryOperation70 -2024-11-07 12:56:16,218
+Return - INFO - processing Return74 -2024-11-07 12:56:16,219
+Object Graph executed in 538.7318 ms
+Memory used by Object Graph: 300.0 KB
+Contract  :  ['start_Sample']
+start_Sample  :  ['START_fun']
+START_fun  :  ['1']
+1  :  ['2']
+2  :  ['3']
+3  :  ['4']
+4  :  ['5']
+5  :  ['6']
+6  :  ['7']
+7  :  ['8', 'JN_IF_1', '9']
+JN_IF_1  :  ['CN_W_3']
+CN_W_3  :  ['12']
+12  :  ['JN_W_3', '13']
+JN_W_3  :  ['15']
+15  :  ['16']
+16  :  ['STOP_fun']
+STOP_fun  :  ['stop_Sample']
+13  :  ['14']
+9  :  ['10', 'JN_IF_2', '11']
+NO CHILD IN DOMINATOR TREE!!!
+TYPE ERROR IGNORED
+NO CHILD IN DOMINATOR TREE!!!
+NO CHILD IN DOMINATOR TREE!!!
+NO CHILD IN DOMINATOR TREE!!!
+NO CHILD IN DOMINATOR TREE!!!
+NO CHILD IN DOMINATOR TREE!!!
+Total Phi Node are: 4
+SSA form executed in 4.9996 ms
+Memory used by SSA: 64.0 KB
+DSA Node Created dsa_mul_JN_IF_1
+mul_1 = mul_0
+DSA Node Created dsa_mul_14
+mul_1 = mul_2
+DSA Node Created dsa_b_JN_IF_1
+b_3 = b_2
+DSA Node Created dsa_b_14
+b_3 = b_4
+DSA Node Created dsa_b_10
+b_6 = b_5
+DSA Node Created dsa_b_11
+b_6 = b_7
+DSA Node Created dsa_b_8
+b_2 = b_1
+DSA Node Created dsa_b_JN_IF_2
+b_2 = b_6
+DSA executed in 2.0006 ms
+Memory used by DSA: 4.0 KB
+All Assert in CFG {'15'}
+All the VCs are:
+['Contract', 'start_Sample', 'START_fun', '1', '2', '3', '4', '5', '6', '7', '8', 'dsa_b_8', 'JN_IF_1', 'dsa_b_JN_IF_1', 'dsa_mul_JN_IF_1', 'CN_W_3', '12', 'JN_W_3', '15']
+['Contract', 'start_Sample', 'START_fun', '1', '2', '3', '4', '5', '6', '7', '8', 'dsa_b_8', 'JN_IF_1', 'dsa_b_JN_IF_1', 'dsa_mul_JN_IF_1', 'CN_W_3', '12', '13', '14', 'dsa_b_14', 'dsa_mul_14', 'CN_W_3', '12', 'JN_W_3', '15']
+['Contract', 'start_Sample', 'START_fun', '1', '2', '3', '4', '5', '6', '7', '9', '10', 'dsa_b_10', 'JN_IF_2', 'dsa_b_JN_IF_2', 'JN_IF_1', 'dsa_b_JN_IF_1', 'dsa_mul_JN_IF_1', 'CN_W_3', '12', 'JN_W_3', '15']
+['Contract', 'start_Sample', 'START_fun', '1', '2', '3', '4', '5', '6', '7', '9', '10', 'dsa_b_10', 'JN_IF_2', 'dsa_b_JN_IF_2', 'JN_IF_1', 'dsa_b_JN_IF_1', 'dsa_mul_JN_IF_1', 'CN_W_3', '12', '13', '14', 'dsa_b_14', 'dsa_mul_14', 'CN_W_3', '12', 'JN_W_3', '15']
+['Contract', 'start_Sample', 'START_fun', '1', '2', '3', '4', '5', '6', '7', '9', '11', 'dsa_b_11', 'JN_IF_2', 'dsa_b_JN_IF_2', 'JN_IF_1', 'dsa_b_JN_IF_1', 'dsa_mul_JN_IF_1', 'CN_W_3', '12', 'JN_W_3', '15']
+['Contract', 'start_Sample', 'START_fun', '1', '2', '3', '4', '5', '6', '7', '9', '11', 'dsa_b_11', 'JN_IF_2', 'dsa_b_JN_IF_2', 'JN_IF_1', 'dsa_b_JN_IF_1', 'dsa_mul_JN_IF_1', 'CN_W_3', '12', '13', '14', 'dsa_b_14', 'dsa_mul_14', 'CN_W_3', '12', 'JN_W_3', '15']
+6
+Not(Implies(And(And(And(And(And(And(And(And(And(And(And(True,And( 0 >= a_0, a_0 <= 4294967295)),And( 0 >= b_0, b_0 <= 4294967295)),And( 0 >= mul_0, mul_0 <= 4294967295)),a_0 >= 0),b_0 >= 0),a_0 == 0),b_1 == 100),b_2 == b_1),b_3 == b_2),mul_1 == mul_0),b_3 > 500),b_3 > 11000))
+Not(Implies(And(And(And(And(And(And(And(And(And(And(And(And(And(And(And(And(True,And( 0 >= a_0, a_0 <= 4294967295)),And( 0 >= b_0, b_0 <= 4294967295)),And( 0 >= mul_0, mul_0 <= 4294967295)),a_0 >= 0),b_0 >= 0),a_0 == 0),b_1 == 100),b_2 == b_1),b_3 == b_2),mul_1 == mul_0),b_3 > 500),mul_2 == mul_1 + a_0 * b_3),b_4 == b_3/2),b_3 == b_4),mul_1 == mul_2),b_3 > 500),b_3 > 11000))
+Not(Implies(And(And(And(And(And(And(And(And(And(And(And(And(And(True,And( 0 >= a_0, a_0 <= 4294967295)),And( 0 >= b_0, b_0 <= 4294967295)),And( 0 >= mul_0, mul_0 <= 4294967295)),a_0 
+>= 0),b_0 >= 0),a_0 == 0),a_0 == 1),b_5 == 1000),b_6 == b_5),b_2 == b_6),b_3 == b_2),mul_1 == mul_0),b_3 > 500),b_3 > 11000))
+Not(Implies(And(And(And(And(And(And(And(And(And(And(And(And(And(And(And(And(And(And(True,And( 0 >= a_0, a_0 <= 4294967295)),And( 0 >= b_0, b_0 <= 4294967295)),And( 0 >= mul_0, mul_0 
+<= 4294967295)),a_0 >= 0),b_0 >= 0),a_0 == 0),a_0 == 1),b_5 == 1000),b_6 == b_5),b_2 == b_6),b_3 == b_2),mul_1 == mul_0),b_3 > 500),mul_2 == mul_1 + a_0 * b_3),b_4 == b_3/2),b_3 == b_4),mul_1 == mul_2),b_3 > 500),b_3 > 11000))
+Not(Implies(And(And(And(And(And(And(And(And(And(And(And(And(And(True,And( 0 >= a_0, a_0 <= 4294967295)),And( 0 >= b_0, b_0 <= 4294967295)),And( 0 >= mul_0, mul_0 <= 4294967295)),a_0 
+>= 0),b_0 >= 0),a_0 == 0),a_0 == 1),b_7 == 10000),b_6 == b_7),b_2 == b_6),b_3 == b_2),mul_1 == mul_0),b_3 > 500),b_3 > 11000))
+Not(Implies(And(And(And(And(And(And(And(And(And(And(And(And(And(And(And(And(And(And(True,And( 0 >= a_0, a_0 <= 4294967295)),And( 0 >= b_0, b_0 <= 4294967295)),And( 0 >= mul_0, mul_0 
+<= 4294967295)),a_0 >= 0),b_0 >= 0),a_0 == 0),a_0 == 1),b_7 == 10000),b_6 == b_7),b_2 == b_6),b_3 == b_2),mul_1 == mul_0),b_3 > 500),mul_2 == mul_1 + a_0 * b_3),b_4 == b_3/2),b_3 == 
+b_4),mul_1 == mul_2),b_3 > 500),b_3 > 11000))
+Z3Formula executed in 4987.6480 ms
+Memory used by Z3Formula: 588.0 KB
+PS G:\Study\ResearchWork\LITERATURE STUDY IITP\FM_Solidity\CODE\Copy(SolidityCodeAnalysisFramework)\SolidityCodeAnalysisFramework> python .\SeAPI\z3formula_1.py
+looksgood
+PS G:\Study\ResearchWork\LITERATURE STUDY IITP\FM_Solidity\CODE\Copy(SolidityCodeAnalysisFramework)\SolidityCodeAnalysisFramework> python .\SeAPI\z3formula_2.py
+looksgood
+PS G:\Study\ResearchWork\LITERATURE STUDY IITP\FM_Solidity\CODE\Copy(SolidityCodeAnalysisFramework)\SolidityCodeAnalysisFramework> python .\SeAPI\z3formula_3.py
+looksgood
+PS G:\Study\ResearchWork\LITERATURE STUDY IITP\FM_Solidity\CODE\Copy(SolidityCodeAnalysisFramework)\SolidityCodeAnalysisFramework> python .\SeAPI\z3formula_4.py
+looksgood
+PS G:\Study\ResearchWork\LITERATURE STUDY IITP\FM_Solidity\CODE\Copy(SolidityCodeAnalysisFramework)\SolidityCodeAnalysisFramework> python .\SeAPI\z3formula_5.py
+looksgood
+PS G:\Study\ResearchWork\LITERATURE STUDY IITP\FM_Solidity\CODE\Copy(SolidityCodeAnalysisFramework)\SolidityCodeAnalysisFramework> python .\SeAPI\z3formula_6.py
+looksgood
+PS G:\Study\ResearchWork\LITERATURE STUDY IITP\FM_Solidity\CODE\Copy(SolidityCodeAnalysisFramework)\SolidityCodeAnalysisFramework>
