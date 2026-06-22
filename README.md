@@ -44,24 +44,4 @@ LoopSymExe/
 └── README.md
 ```
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-[Add your license information here]
-
-## Contact
-
-For questions or feedback, please open an issue on the repository.
-
----
-
-**Note:** This README was generated as a template. Please update it with specific information about your project, including:
-- Detailed project description
-- Installation and setup instructions
-- Usage examples
-- Project structure details
-- License information
-- Contributing guidelines
+**Note:** Few of the files of the tools are supposed to be uploaded once the paper gets accepted.
