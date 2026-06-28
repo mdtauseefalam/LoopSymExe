@@ -1,0 +1,130 @@
+[
+  {
+    "filename": "0xec329ffc97d75fe03428ae155fc7793431487f63.sol",
+    "function": "fill",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "data.length > 0 && next == 0",
+    "loop postcondition": "i == data.length && acc == sum of all data[j]/D160 for j in [0, data.length) && transfers.length == offset + data.length",
+    "loop invariant": "0 <= i && i <= data.length && acc >= 0 && transfers.length == offset + data.length"
+  },
+  {
+    "filename": "0xec329ffc97d75fe03428ae155fc7793431487f63.sol",
+    "function": "run",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "transfers.length > 0 && mNext < transfers.length && gas() > 150000",
+    "loop postcondition": "mNext >= transfers.length || gas() <= 150000",
+    "loop invariant": "next_initial <= mNext && mNext <= transfers.length"
+  },
+  {
+    "filename": "blackjack.sol",
+    "function": "stand",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "houseScoreBig < 17 && games[msg.sender].cardsDealt >= 0",
+    "loop postcondition": "houseScoreBig >= 17",
+    "loop invariant": "houseScoreBig >= 0 && games[msg.sender].cardsDealt >= initial_cardsDealt"
+  },
+  {
+    "filename": "blackjack.sol",
+    "function": "calculateScore",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "cards.length > 0 && score == 0 && scoreBig == 0",
+    "loop postcondition": "i == cards.length && score >= 0 && scoreBig >= 0",
+    "loop invariant": "0 <= i && i <= cards.length && score <= scoreBig"
+  },
+  {
+    "filename": "etheraffle.sol",
+    "function": "buyTickets",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "moneySent >= pricePerTicket && nextTicket < totalTickets",
+    "loop postcondition": "moneySent < pricePerTicket || nextTicket >= totalTickets",
+    "loop invariant": "moneySent >= 0 && nextTicket <= totalTickets"
+  },
+  {
+    "filename": "etheraffle.sol",
+    "function": "getRefund",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "totalTickets > 0 && i == 0",
+    "loop postcondition": "i == totalTickets",
+    "loop invariant": "0 <= i && i <= totalTickets && refund >= 0"
+  },
+  {
+    "filename": "etheraffle.sol",
+    "function": "endRaffle",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "parity_wallet_bug_2.sol",
+    "function": "initMultiowned",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "_owners.length > 0 && i == 0",
+    "loop postcondition": "i == _owners.length && all owners registered in m_owners and m_ownerIndex",
+    "loop invariant": "0 <= i && i <= _owners.length && m_owners[2 + i] is set for all processed entries"
+  },
+  {
+    "filename": "parity_wallet_bug_2.sol",
+    "function": "reorganizeOwners",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "free == 1 && free < m_numOwners",
+    "loop postcondition": "free >= m_numOwners",
+    "loop invariant": "1 <= free && free <= m_numOwners && m_numOwners >= 1"
+  },
+  {
+    "filename": "parity_wallet_bug_2.sol",
+    "function": "clearPending",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "smart_billions.sol",
+    "function": "commitDividend",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "last < dividendPeriod && balances[_who] > 0 && totalSupply > 0",
+    "loop postcondition": "last == dividendPeriod && balance == sum of share * dividends[p] for p in [initial_last, dividendPeriod)",
+    "loop invariant": "initial_last <= last && last <= dividendPeriod && balance >= 0"
+  },
+  {
+    "filename": "smart_billions.sol",
+    "function": "addHashes",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "n == hashes.length (before resize) && n < hashesSize",
+    "loop postcondition": "n == hashes.length && all hashes[n..hashes.length-1] == 1",
+    "loop invariant": "initial_n <= n && n <= hashes.length && hashes[k] == 1 for all k in [initial_n, n)"
+  },
+  {
+    "filename": "smart_billions.sol",
+    "function": "putHashes",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "spank_chain_payment.sol",
+    "function": "hexstrToBytes",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "len > 0 && len % 2 == 0 && i == 0 && k == 0",
+    "loop postcondition": "i == len && k == len / 2 && bstr fully populated",
+    "loop invariant": "0 <= i && i <= len && k == i / 2 && i % 2 == 0"
+  },
+  {
+    "filename": "spank_chain_payment.sol",
+    "function": "uintToString",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "_uint > 0 (first while: m == _uint) && m != 0",
+    "loop postcondition": "m == 0 && len == number of decimal digits of original _uint",
+    "loop invariant": "m >= 0 && len >= 0 && m == _uint / 10^len"
+  },
+  {
+    "filename": "spank_chain_payment.sol",
+    "function": "substring",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "_startIndex <= _endIndex && _endIndex <= strBytes.length && i == _startIndex",
+    "loop postcondition": "i == _endIndex && result fully populated from strBytes[_startIndex.._endIndex)",
+    "loop invariant": "_startIndex <= i && i <= _endIndex && result[i - _startIndex] set for all processed i"
+  }
+]

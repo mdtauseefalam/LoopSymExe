@@ -1,0 +1,1842 @@
+[
+  {
+    "filename": "0x01d5d0108589f3c52fcce6e65503bb6515e66698.sol",
+    "function": "_adjustWeight",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "proposalIndex.length > 0 && i == proposalIndex.length",
+    "loop postcondition": "i == 0 || loop exited via break",
+    "loop invariant": "0 <= i && i <= proposalIndex.length && p.supportingWeight and p.rejectingWeight updated without overflow check"
+  },
+  {
+    "filename": "0x092d3374f942bb4a99ce64f37fa7e661fdd1e74c.sol",
+    "function": "Crowdsale",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 1 && bonusStages.length > 1",
+    "loop postcondition": "i == bonusStages.length && all bonusStages[i] set",
+    "loop invariant": "1 <= i && i <= bonusStages.length && bonusStages[i-1] is set"
+  },
+  {
+    "filename": "0x092d3374f942bb4a99ce64f37fa7e661fdd1e74c.sol",
+    "function": "getBonusPercentage",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "bonusPercentage == 25 && i == 0",
+    "loop postcondition": "i == bonusStages.length || loop exited via break",
+    "loop invariant": "0 <= i && i <= bonusStages.length && bonusPercentage decremented by 5 per iteration (potential underflow)"
+  },
+  {
+    "filename": "0x103c2c150a2dbcc277ee084c59881978060c8c22.sol",
+    "function": "commitDividend",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "last < dividendPeriod && balances[_who] != 0 && last != 0",
+    "loop postcondition": "last == dividendPeriod",
+    "loop invariant": "last <= dividendPeriod && balance += share * dividends[last] (unchecked overflow on balance accumulation)"
+  },
+  {
+    "filename": "0x103c2c150a2dbcc277ee084c59881978060c8c22.sol",
+    "function": "addHashes",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "n == previous hashes.length && n < hashes.length",
+    "loop postcondition": "n == hashes.length",
+    "loop invariant": "n <= hashes.length && hashes[n] assigned"
+  },
+  {
+    "filename": "0x103c2c150a2dbcc277ee084c59881978060c8c22.sol",
+    "function": "putHashes",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x141766882733cafa9033e8707548fdcac908db22.sol",
+    "function": "_transfer",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "fromTokens.length > 0 && i == 0",
+    "loop postcondition": "i == fromTokens.length - 1 || _tokenId found and shifted",
+    "loop invariant": "0 <= i && i < fromTokens.length - 1 && fromTokens[i] = fromTokens[i+1] on shift (i+1 may overflow if length is 0 but guard exists)"
+  },
+  {
+    "filename": "0x141766882733cafa9033e8707548fdcac908db22.sol",
+    "function": "_getTop5HeroesPower",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "heroCount > 0 && i == 0",
+    "loop postcondition": "i == heroCount",
+    "loop invariant": "0 <= i && i < heroCount && heroPowers[i] computed"
+  },
+  {
+    "filename": "0x141766882733cafa9033e8707548fdcac908db22.sol",
+    "function": "_getTop5HeroesPower",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "j == 0 && heroPowers.length == heroCount",
+    "loop postcondition": "j == 5",
+    "loop invariant": "0 <= j && j < 5 && result accumulates top j powers (result += curMax unchecked)"
+  },
+  {
+    "filename": "0x141766882733cafa9033e8707548fdcac908db22.sol",
+    "function": "_getHeroPower",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && _genes valid",
+    "loop postcondition": "i == 4 && statsPower accumulated",
+    "loop invariant": "0 <= i && i < 4 && statsPower += _genes % 32 + 1 (unchecked overflow)"
+  },
+  {
+    "filename": "0x141766882733cafa9033e8707548fdcac908db22.sol",
+    "function": "_getHeroPower",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "j == 4 && _genes valid",
+    "loop postcondition": "j == 12",
+    "loop invariant": "4 <= j && j < 12 && equipmentPower += EQUIPMENT_POWERS[curGene] (unchecked overflow)"
+  },
+  {
+    "filename": "0x141766882733cafa9033e8707548fdcac908db22.sol",
+    "function": "_getDungeonPower",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "j == 0 && _genes valid",
+    "loop postcondition": "j == 12",
+    "loop invariant": "0 <= j && j < 12 && dungeonPower += EQUIPMENT_POWERS[_genes % 32] (unchecked overflow)"
+  },
+  {
+    "filename": "0x1c02ce498dc6d0d6ef05a253e021258b07eeba91.sol",
+    "function": "buyerHistory",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && length > 0",
+    "loop postcondition": "i == length",
+    "loop invariant": "0 <= i && i < length && startID + i computed (potential overflow on startID + i)"
+  },
+  {
+    "filename": "0x1c02ce498dc6d0d6ef05a253e021258b07eeba91.sol",
+    "function": "SellerHistory",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && numToLoad > 0",
+    "loop postcondition": "i == numToLoad || i >= sellerDatabase[inputAddress].length",
+    "loop invariant": "0 <= i && i < numToLoad && startID + i computed (potential overflow on startID + i)"
+  },
+  {
+    "filename": "0x1c02ce498dc6d0d6ef05a253e021258b07eeba91.sol",
+    "function": "escrowHistory",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && numToLoad > 0",
+    "loop postcondition": "i == numToLoad || i >= escrowDatabase[inputAddress].length",
+    "loop invariant": "0 <= i && i < numToLoad && startID + i computed (potential overflow on startID + i)"
+  },
+  {
+    "filename": "0x1e2fbe6be9eb39fc894d38be976111f332172d83.sol",
+    "function": "parseAddr",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 2 && tmp.length >= 42",
+    "loop postcondition": "i == 42",
+    "loop invariant": "2 <= i && i <= 42 && iaddr *= 256 + b1*16+b2 (unchecked overflow on iaddr)"
+  },
+  {
+    "filename": "0x1e2fbe6be9eb39fc894d38be976111f332172d83.sol",
+    "function": "strCompare",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x1e2fbe6be9eb39fc894d38be976111f332172d83.sol",
+    "function": "indexOf",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && h.length >= 1",
+    "loop postcondition": "i == h.length || match found",
+    "loop invariant": "0 <= i && i < h.length && subindex incremented without bound check on i+subindex overflow"
+  },
+  {
+    "filename": "0x1e2fbe6be9eb39fc894d38be976111f332172d83.sol",
+    "function": "strConcat",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && k == 0",
+    "loop postcondition": "k == total bytes copied",
+    "loop invariant": "k++ incremented per iteration (unchecked overflow on k)"
+  },
+  {
+    "filename": "0x1e2fbe6be9eb39fc894d38be976111f332172d83.sol",
+    "function": "parseInt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && bresult.length > 0",
+    "loop postcondition": "i == bresult.length || break on _b==0",
+    "loop invariant": "0 <= i && i < bresult.length && mint = mint*10 + digit (unchecked overflow on mint)"
+  },
+  {
+    "filename": "0x1e2fbe6be9eb39fc894d38be976111f332172d83.sol",
+    "function": "uint2str",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "j != 0",
+    "loop postcondition": "j == 0 && len == number of digits",
+    "loop invariant": "j > 0 && j /= 10 per iteration && k-- on second while (k underflow if len == 0)"
+  },
+  {
+    "filename": "0x1e2fbe6be9eb39fc894d38be976111f332172d83.sol",
+    "function": "searchSmallestInvestor",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x1e2fbe6be9eb39fc894d38be976111f332172d83.sol",
+    "function": "profitDistribution",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 1 && numInvestors > 0",
+    "loop postcondition": "i == numInvestors + 1",
+    "loop invariant": "1 <= i && i <= numInvestors && investors[i].amountInvested += profitOfInvestor - lossesOfInvestor (unchecked underflow)"
+  },
+  {
+    "filename": "0x1e2fbe6be9eb39fc894d38be976111f332172d83.sol",
+    "function": "forceDivestOfAllInvestors",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x1e2fbe6be9eb39fc894d38be976111f332172d83.sol",
+    "function": "proposeEmergencyWithdrawal",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x1e2fbe6be9eb39fc894d38be976111f332172d83.sol",
+    "function": "executeEmergencyWithdrawal",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 1 && numInvestors > 0",
+    "loop postcondition": "i == numInvestors + 1",
+    "loop invariant": "1 <= i && i <= numInvestors && numOfVotesInFavour++ (unchecked overflow)"
+  },
+  {
+    "filename": "0x26d08b9d227933a85e855656dc46ab889e183c88.sol",
+    "function": "getBonus",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && _bonusPattern.length == 8",
+    "loop postcondition": "i == _bonusPattern.length",
+    "loop invariant": "0 <= i && i < _bonusPattern.length && _sold += _bonusPart and _pktValue -= _bonusPart (unchecked underflow on _pktValue)"
+  },
+  {
+    "filename": "0x26d08b9d227933a85e855656dc46ab889e183c88.sol",
+    "function": "mintForEarlyInvestors",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x29aa20fB9b23421E310BDB8a7cfB81d7fbB4a1b3.sol",
+    "function": "distribute_reward",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && total_users > 0",
+    "loop postcondition": "i == total_users",
+    "loop invariant": "0 <= i && i < total_users && divided_portion = proportion * divisible_units / _totalAttempt (unchecked overflow in proportion * divisible_units)"
+  },
+  {
+    "filename": "0x29aa20fB9b23421E310BDB8a7cfB81d7fbB4a1b3.sol",
+    "function": "mine",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && total_users > 0",
+    "loop postcondition": "i == total_users",
+    "loop invariant": "0 <= i && i < total_users && total_attempt += u.proportional_contribution (unchecked overflow)"
+  },
+  {
+    "filename": "0x2c6c596cfd4c2c3b039db90fd3c8acb564e13251.sol",
+    "function": "getValueAt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "max > min && checkpoints.length > 1",
+    "loop postcondition": "max == min",
+    "loop invariant": "0 <= min && min <= max && max <= checkpoints.length-1 && mid = (max+min+1)/2 (potential overflow on max+min+1)"
+  },
+  {
+    "filename": "0x311d745582a97be5d7abbce48855ecec72737c5d.sol",
+    "function": "scanInputs",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && halt > 0",
+    "loop postcondition": "i == halt",
+    "loop invariant": "0 <= i && i < halt && pos += 36 + script_len + 4 (unchecked overflow on pos)"
+  },
+  {
+    "filename": "0x311d745582a97be5d7abbce48855ecec72737c5d.sol",
+    "function": "scanOutputs",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && halt > 0",
+    "loop postcondition": "i == halt",
+    "loop invariant": "0 <= i && i < halt && pos += 8 + script_len (unchecked overflow on pos)"
+  },
+  {
+    "filename": "0x311d745582a97be5d7abbce48855ecec72737c5d.sol",
+    "function": "sliceBytes20",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && start valid",
+    "loop postcondition": "i == 20",
+    "loop invariant": "0 <= i && i < 20 && slice += uint160(data[i+start]) << (8*(19-i)) (unchecked overflow on slice accumulation)"
+  },
+  {
+    "filename": "0x311d745582a97be5d7abbce48855ecec72737c5d.sol",
+    "function": "getFirstTwoOutputs",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x311d745582a97be5d7abbce48855ecec72737c5d.sol",
+    "function": "checkValueSent",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x32bacc8b241fb172fee18bda32527126c6f3c5f7.sol",
+    "function": "multiowned",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x32bacc8b241fb172fee18bda32527126c6f3c5f7.sol",
+    "function": "reorganizeOwners",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "free == 1 && m_numOwners >= 1",
+    "loop postcondition": "free >= m_numOwners",
+    "loop invariant": "1 <= free && free <= m_numOwners && m_numOwners decremented without underflow check"
+  },
+  {
+    "filename": "0x32bacc8b241fb172fee18bda32527126c6f3c5f7.sol",
+    "function": "clearPending",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x357f07ac89ee6329a70ca837d6bfc16b0275015f.sol",
+    "function": "parseAddr",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 2 && tmp.length >= 42",
+    "loop postcondition": "i == 42",
+    "loop invariant": "2 <= i && i <= 42 && iaddr *= 256 + b1*16+b2 (unchecked overflow on iaddr)"
+  },
+  {
+    "filename": "0x357f07ac89ee6329a70ca837d6bfc16b0275015f.sol",
+    "function": "strCompare",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x357f07ac89ee6329a70ca837d6bfc16b0275015f.sol",
+    "function": "indexOf",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && h.length >= 1",
+    "loop postcondition": "i == h.length || match found",
+    "loop invariant": "0 <= i && i < h.length && i + subindex may overflow for large strings"
+  },
+  {
+    "filename": "0x357f07ac89ee6329a70ca837d6bfc16b0275015f.sol",
+    "function": "parseInt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && bresult.length > 0",
+    "loop postcondition": "i == bresult.length",
+    "loop invariant": "0 <= i && i < bresult.length && mint = mint*10 + digit (unchecked overflow)"
+  },
+  {
+    "filename": "0x357f07ac89ee6329a70ca837d6bfc16b0275015f.sol",
+    "function": "uint2str",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "j != 0",
+    "loop postcondition": "j == 0",
+    "loop invariant": "j > 0 && j /= 10 per iteration && k-- in second loop (underflow risk)"
+  },
+  {
+    "filename": "0x357f07ac89ee6329a70ca837d6bfc16b0275015f.sol",
+    "function": "matchBytes32Prefix",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x357f07ac89ee6329a70ca837d6bfc16b0275015f.sol",
+    "function": "searchSmallestInvestor",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x357f07ac89ee6329a70ca837d6bfc16b0275015f.sol",
+    "function": "profitDistribution",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 1 && numInvestors > 0",
+    "loop postcondition": "i == numInvestors + 1",
+    "loop invariant": "1 <= i && i <= numInvestors && investors[i].amountInvested += profitOfInvestor - lossesOfInvestor (unchecked underflow)"
+  },
+  {
+    "filename": "0x357f07ac89ee6329a70ca837d6bfc16b0275015f.sol",
+    "function": "forceDivestOfAllInvestors",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x357f07ac89ee6329a70ca837d6bfc16b0275015f.sol",
+    "function": "proposeEmergencyWithdrawal",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x357f07ac89ee6329a70ca837d6bfc16b0275015f.sol",
+    "function": "executeEmergencyWithdrawal",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 1 && numInvestors > 0",
+    "loop postcondition": "i == numInvestors + 1",
+    "loop invariant": "1 <= i && i <= numInvestors && numOfVotesInFavour++ (unchecked overflow)"
+  },
+  {
+    "filename": "0x357f07ac89ee6329a70ca837d6bfc16b0275015f.sol",
+    "function": "strConcat",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && k == 0",
+    "loop postcondition": "k == total bytes",
+    "loop invariant": "k++ per iteration (unchecked overflow on k)"
+  },
+  {
+    "filename": "0x365267181bc0ef38bbb8d8ca9b330dc0c3ac01d1.sol",
+    "function": "SetAction",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x365267181bc0ef38bbb8d8ca9b330dc0c3ac01d1.sol",
+    "function": "Approve",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 1 && mgrCount > 0",
+    "loop postcondition": "i == mgrCount + 1",
+    "loop invariant": "1 <= i && i <= mgrCount && curVotes = curVotes + 1 (unchecked overflow)"
+  },
+  {
+    "filename": "0x365267181bc0ef38bbb8d8ca9b330dc0c3ac01d1.sol",
+    "function": "NullSettings",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x365267181bc0ef38bbb8d8ca9b330dc0c3ac01d1.sol",
+    "function": "IsManager",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x3aaa175924a77ee4b40606f714b727331e430ece.sol",
+    "function": "contestChampion",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && maxIndex == 9",
+    "loop postcondition": "i == maxIndex + 1",
+    "loop invariant": "0 <= i && i <= maxIndex && myRank = i (unsafe use of i for array index shift in nested loop)"
+  },
+  {
+    "filename": "0x3efb2bbdf798c5f9fe0dd932846fa1b031eac1fe.sol",
+    "function": "register",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x41ff0796a6c7a201476bff53c4cb2c48b084e5e0.sol",
+    "function": "parseAddr",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 2 && tmp.length >= 42",
+    "loop postcondition": "i == 42",
+    "loop invariant": "2 <= i && i <= 42 && iaddr *= 256 + b1*16+b2 (unchecked overflow on iaddr)"
+  },
+  {
+    "filename": "0x41ff0796a6c7a201476bff53c4cb2c48b084e5e0.sol",
+    "function": "parseInt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && bresult.length > 0",
+    "loop postcondition": "i == bresult.length",
+    "loop invariant": "0 <= i && i < bresult.length && mint = mint*10 + digit (unchecked overflow)"
+  },
+  {
+    "filename": "0x41ff0796a6c7a201476bff53c4cb2c48b084e5e0.sol",
+    "function": "uint2str",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "j != 0",
+    "loop postcondition": "j == 0",
+    "loop invariant": "j > 0 && j /= 10 && k-- in second while (underflow risk)"
+  },
+  {
+    "filename": "0x41ff0796a6c7a201476bff53c4cb2c48b084e5e0.sol",
+    "function": "profitDistribution",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 1 && numInvestors > 0",
+    "loop postcondition": "i == numInvestors + 1",
+    "loop invariant": "1 <= i && i <= numInvestors && investors[i].amountInvested += profitOfInvestor - lossesOfInvestor (unchecked underflow)"
+  },
+  {
+    "filename": "0x41ff0796a6c7a201476bff53c4cb2c48b084e5e0.sol",
+    "function": "forceDivestOfAllInvestors",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x41ff0796a6c7a201476bff53c4cb2c48b084e5e0.sol",
+    "function": "executeEmergencyWithdrawal",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 1 && numInvestors > 0",
+    "loop postcondition": "i == numInvestors + 1",
+    "loop invariant": "1 <= i && i <= numInvestors && numOfVotesInFavour++ (unchecked overflow)"
+  },
+  {
+    "filename": "0x48d8f22d45e40F34cB7C10799F31246F134E9B7f.sol",
+    "function": "parseInt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && bresult.length > 0",
+    "loop postcondition": "i == bresult.length",
+    "loop invariant": "0 <= i && i < bresult.length && mint = mint*10 + digit (unchecked overflow)"
+  },
+  {
+    "filename": "0x48d8f22d45e40F34cB7C10799F31246F134E9B7f.sol",
+    "function": "uint2str",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "j != 0",
+    "loop postcondition": "j == 0",
+    "loop invariant": "j > 0 && j /= 10 && k-- (underflow risk)"
+  },
+  {
+    "filename": "0x49516fe7bdc54b29a7f95ff55fdd38d9228e55af.sol",
+    "function": "insertInPlace",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == uint8(self.length) - 1 && i > insertingIndex",
+    "loop postcondition": "i == insertingIndex",
+    "loop invariant": "i > insertingIndex && self[i] = self[i-1] && i-- (uint8 underflow if insertingIndex == 0)"
+  },
+  {
+    "filename": "0x49fddeae0b521dab8d0c4b77e7161094f971320d.sol",
+    "function": "parseInt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && bresult.length > 0",
+    "loop postcondition": "i == bresult.length",
+    "loop invariant": "0 <= i && i < bresult.length && mint = mint*10 + digit (unchecked overflow)"
+  },
+  {
+    "filename": "0x49fddeae0b521dab8d0c4b77e7161094f971320d.sol",
+    "function": "uint2str",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "j != 0",
+    "loop postcondition": "j == 0",
+    "loop invariant": "j > 0 && j /= 10 && k-- (underflow risk)"
+  },
+  {
+    "filename": "0x49fddeae0b521dab8d0c4b77e7161094f971320d.sol",
+    "function": "searchSmallestInvestor",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x49fddeae0b521dab8d0c4b77e7161094f971320d.sol",
+    "function": "profitDistribution",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 1 && numInvestors > 0",
+    "loop postcondition": "i == numInvestors + 1",
+    "loop invariant": "1 <= i && i <= numInvestors && investors[i].amountInvested += profitOfInvestor - lossesOfInvestor (unchecked underflow)"
+  },
+  {
+    "filename": "0x49fddeae0b521dab8d0c4b77e7161094f971320d.sol",
+    "function": "forceDivestOfAllInvestors",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x49fddeae0b521dab8d0c4b77e7161094f971320d.sol",
+    "function": "proposeEmergencyWithdrawal",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x49fddeae0b521dab8d0c4b77e7161094f971320d.sol",
+    "function": "executeEmergencyWithdrawal",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 1 && numInvestors > 0",
+    "loop postcondition": "i == numInvestors + 1",
+    "loop invariant": "1 <= i && i <= numInvestors && numOfVotesInFavour++ (unchecked overflow)"
+  },
+  {
+    "filename": "0x4e646a576917a6a47d5b0896c3e207693870869d.sol",
+    "function": "parseInt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && bresult.length > 0",
+    "loop postcondition": "i == bresult.length",
+    "loop invariant": "0 <= i && i < bresult.length && mint = mint*10 + digit (unchecked overflow)"
+  },
+  {
+    "filename": "0x4e646a576917a6a47d5b0896c3e207693870869d.sol",
+    "function": "uint2str",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "j != 0",
+    "loop postcondition": "j == 0",
+    "loop invariant": "j > 0 && j /= 10 && k-- (underflow risk)"
+  },
+  {
+    "filename": "0x4e646a576917a6a47d5b0896c3e207693870869d.sol",
+    "function": "searchSmallestInvestor",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x4e646a576917a6a47d5b0896c3e207693870869d.sol",
+    "function": "profitDistribution",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 1 && numInvestors > 0",
+    "loop postcondition": "i == numInvestors + 1",
+    "loop invariant": "1 <= i && i <= numInvestors && investors[i].amountInvested += profitOfInvestor - lossesOfInvestor (unchecked underflow)"
+  },
+  {
+    "filename": "0x4e646a576917a6a47d5b0896c3e207693870869d.sol",
+    "function": "forceDivestOfAllInvestors",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x4e646a576917a6a47d5b0896c3e207693870869d.sol",
+    "function": "proposeEmergencyWithdrawal",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x4e646a576917a6a47d5b0896c3e207693870869d.sol",
+    "function": "executeEmergencyWithdrawal",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 1 && numInvestors > 0",
+    "loop postcondition": "i == numInvestors + 1",
+    "loop invariant": "1 <= i && i <= numInvestors && numOfVotesInFavour++ (unchecked overflow)"
+  },
+  {
+    "filename": "0x525aEEf9Af9ae896179EE287e024a40cF5FC7655.sol",
+    "function": "investInternal",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && joinedCrowdsalesLen > 0",
+    "loop postcondition": "i == joinedCrowdsalesLen",
+    "loop invariant": "0 <= i && i < joinedCrowdsalesLen && num updated (num+1 may overflow if num == max uint)"
+  },
+  {
+    "filename": "0x525aEEf9Af9ae896179EE287e024a40cF5FC7655.sol",
+    "function": "setEndsAt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && joinedCrowdsalesLen > 0",
+    "loop postcondition": "i == joinedCrowdsalesLen",
+    "loop invariant": "0 <= i && i < joinedCrowdsalesLen && num+1 may overflow"
+  },
+  {
+    "filename": "0x525aEEf9Af9ae896179EE287e024a40cF5FC7655.sol",
+    "function": "setEarlyParicipantsWhitelist",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x525aEEf9Af9ae896179EE287e024a40cF5FC7655.sol",
+    "function": "updateJoinedCrowdsalesMultiple",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "iter == 0 && addrs.length > 0",
+    "loop postcondition": "iter == addrs.length",
+    "loop invariant": "0 <= iter && iter < addrs.length && joinedCrowdsalesLen++ (unchecked overflow)"
+  },
+  {
+    "filename": "0x525aEEf9Af9ae896179EE287e024a40cF5FC7655.sol",
+    "function": "finalizeCrowdsale",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "j == 0 && token.reservedTokensDestinationsLen() > 0",
+    "loop postcondition": "j == token.reservedTokensDestinationsLen()",
+    "loop invariant": "0 <= j && j < reservedTokensDestinationsLen && tokensSold += allocatedBonusInPercentage (unchecked overflow)"
+  },
+  {
+    "filename": "0x5b36208992284CEFA4de83F2Fb34B33D1A75d4B7.sol",
+    "function": "investInternal",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && joinedCrowdsalesLen > 0",
+    "loop postcondition": "i == joinedCrowdsalesLen",
+    "loop invariant": "0 <= i && i < joinedCrowdsalesLen && num+1 may overflow"
+  },
+  {
+    "filename": "0x5b36208992284CEFA4de83F2Fb34B33D1A75d4B7.sol",
+    "function": "setEndsAt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && joinedCrowdsalesLen > 0",
+    "loop postcondition": "i == joinedCrowdsalesLen",
+    "loop invariant": "0 <= i && i < joinedCrowdsalesLen && num+1 may overflow"
+  },
+  {
+    "filename": "0x5b36208992284CEFA4de83F2Fb34B33D1A75d4B7.sol",
+    "function": "setEarlyParicipantsWhitelist",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x5b36208992284CEFA4de83F2Fb34B33D1A75d4B7.sol",
+    "function": "updateJoinedCrowdsalesMultiple",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "iter == 0 && addrs.length > 0",
+    "loop postcondition": "iter == addrs.length",
+    "loop invariant": "0 <= iter && iter < addrs.length && joinedCrowdsalesLen++ (unchecked overflow)"
+  },
+  {
+    "filename": "0x6822aaf4ab22e6cca8352a927b9ae0a8fdb58d9d.sol",
+    "function": "getValueAt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "max > min && checkpoints.length > 1",
+    "loop postcondition": "max == min",
+    "loop invariant": "0 <= min && min <= max && mid = (max+min+1)/2 (potential overflow on max+min+1)"
+  },
+  {
+    "filename": "0x6b609d9095d069c805650234ab67595b3a6ab934.sol",
+    "function": "balanceOf",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && allocatedIndex[_owner].length > 0",
+    "loop postcondition": "i == allocatedIndex[_owner].length",
+    "loop invariant": "0 <= i && i < allocatedIndex[_owner].length && sum += allocated[_owner][...].tokens (unchecked overflow)"
+  },
+  {
+    "filename": "0x6b609d9095d069c805650234ab67595b3a6ab934.sol",
+    "function": "ethBalanceOf",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && allocatedIndex[_owner].length > 0",
+    "loop postcondition": "i == allocatedIndex[_owner].length",
+    "loop invariant": "0 <= i && i < allocatedIndex[_owner].length && sum += allocated[_owner][...].eth (unchecked overflow)"
+  },
+  {
+    "filename": "0x6b609d9095d069c805650234ab67595b3a6ab934.sol",
+    "function": "getCurrentPhase",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x6b609d9095d069c805650234ab67595b3a6ab934.sol",
+    "function": "getRate",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == volumeMultiplierThresholds.length && i > 0",
+    "loop postcondition": "i == 0 or break",
+    "loop invariant": "0 < i <= volumeMultiplierThresholds.length && rate += phase.rate * multiplier.rateMultiplier / percentageDenominator (unchecked overflow)"
+  },
+  {
+    "filename": "0x6b609d9095d069c805650234ab67595b3a6ab934.sol",
+    "function": "getDistributionData",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == volumeMultiplierThresholds.length && i > 0",
+    "loop postcondition": "i == 0 or break",
+    "loop invariant": "0 < i <= volumeMultiplierThresholds.length && remainingVolume -= volume (unchecked underflow)"
+  },
+  {
+    "filename": "0x6b609d9095d069c805650234ab67595b3a6ab934.sol",
+    "function": "setupPhases",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && _phaseRates.length > 0",
+    "loop postcondition": "i == _phaseRates.length",
+    "loop invariant": "0 <= i && i < _phaseRates.length && crowdsaleEnd += _phasePeriods[i] (unchecked overflow)"
+  },
+  {
+    "filename": "0x6b609d9095d069c805650234ab67595b3a6ab934.sol",
+    "function": "setupStakeholders",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x6b609d9095d069c805650234ab67595b3a6ab934.sol",
+    "function": "setupVolumeMultipliers",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x6b609d9095d069c805650234ab67595b3a6ab934.sol",
+    "function": "endCrowdsale",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && stakeholdersPayouts.length > 0",
+    "loop postcondition": "i == stakeholdersPayouts.length",
+    "loop invariant": "0 <= i && i < stakeholdersPayouts.length && totalTokenSupply * p.percentage / percentageDenominator (unchecked overflow)"
+  },
+  {
+    "filename": "0x6b609d9095d069c805650234ab67595b3a6ab934.sol",
+    "function": "withdrawTokensTo",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && allocatedIndex[msg.sender].length > 0",
+    "loop postcondition": "i == allocatedIndex[msg.sender].length",
+    "loop invariant": "0 <= i && i < allocatedIndex[msg.sender].length && tokensToSend += b.tokens (unchecked overflow)"
+  },
+  {
+    "filename": "0x6b609d9095d069c805650234ab67595b3a6ab934.sol",
+    "function": "withdrawEtherTo",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && allocatedIndex[msg.sender].length > 0",
+    "loop postcondition": "i == allocatedIndex[msg.sender].length",
+    "loop invariant": "0 <= i && i < allocatedIndex[msg.sender].length && ethToSend += b.eth (unchecked overflow)"
+  },
+  {
+    "filename": "0x6b609d9095d069c805650234ab67595b3a6ab934.sol",
+    "function": "_distributeTokens",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && volumes.length > 0",
+    "loop postcondition": "i == volumes.length",
+    "loop invariant": "0 <= i && i < volumes.length && tokensToIssue += tokensAtCurrentRate (unchecked overflow)"
+  },
+  {
+    "filename": "0x6b609d9095d069c805650234ab67595b3a6ab934.sol",
+    "function": "_allocateStakeholdersEth",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && stakeholderPercentagesIndex.length > 0",
+    "loop postcondition": "i == stakeholderPercentagesIndex.length",
+    "loop invariant": "0 <= i && i < stakeholderPercentagesIndex.length && _amount * p.eth / percentageDenominator (unchecked overflow)"
+  },
+  {
+    "filename": "0x6b609d9095d069c805650234ab67595b3a6ab934.sol",
+    "function": "_allocateStakeholdersTokens",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && stakeholderPercentagesIndex.length > 0",
+    "loop postcondition": "i == stakeholderPercentagesIndex.length",
+    "loop invariant": "0 <= i && i < stakeholderPercentagesIndex.length && _amount * p.tokens / percentageDenominator (unchecked overflow)"
+  },
+  {
+    "filename": "0x6d5cac36c1ae39f41d52393b7a425d0a610ad9f2.sol",
+    "function": "parseTimestamp",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 1 && timestamp valid",
+    "loop postcondition": "i == 12 or month found",
+    "loop invariant": "1 <= i && i <= 12 && secondsAccountedFor += secondsInMonth (unchecked overflow)"
+  },
+  {
+    "filename": "0x6d5cac36c1ae39f41d52393b7a425d0a610ad9f2.sol",
+    "function": "getYear",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "secondsAccountedFor > timestamp",
+    "loop postcondition": "secondsAccountedFor <= timestamp",
+    "loop invariant": "year >= ORIGIN_YEAR && secondsAccountedFor -= LEAP_YEAR_IN_SECONDS or YEAR_IN_SECONDS && year-- (year underflow risk)"
+  },
+  {
+    "filename": "0x6d5cac36c1ae39f41d52393b7a425d0a610ad9f2.sol",
+    "function": "toTimestamp",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == ORIGIN_YEAR && i < year",
+    "loop postcondition": "i == year",
+    "loop invariant": "ORIGIN_YEAR <= i && i < year && timestamp += LEAP_YEAR_IN_SECONDS or YEAR_IN_SECONDS (unchecked overflow)"
+  },
+  {
+    "filename": "0x6f6deb5db0c4994a8283a01d6cfeeb27fc3bbe9c.sol",
+    "function": "commitDividend",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "last < dividendPeriod && balances[_who] != 0",
+    "loop postcondition": "last == dividendPeriod",
+    "loop invariant": "last <= dividendPeriod && balance += share * dividends[last] (unchecked overflow)"
+  },
+  {
+    "filename": "0x6f6deb5db0c4994a8283a01d6cfeeb27fc3bbe9c.sol",
+    "function": "addHashes",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "n < hashes.length && hashes.length <= hashesSize",
+    "loop postcondition": "n == hashes.length",
+    "loop invariant": "n <= hashes.length && hashes[n] assigned && n++ (unchecked overflow on n)"
+  },
+  {
+    "filename": "0x6f6deb5db0c4994a8283a01d6cfeeb27fc3bbe9c.sol",
+    "function": "putHashes",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x7352cb77c2478a59d21230a8d65146e04b59f58c.sol",
+    "function": "getTop",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x7352cb77c2478a59d21230a8d65146e04b59f58c.sol",
+    "function": "innerInvoke",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "current.timestamp != 0 && current.timestamp < now",
+    "loop postcondition": "current.timestamp == 0 || current.timestamp >= now || msg.gas < current.gasLimit",
+    "loop invariant": "amount += getPriceInner(current.gasLimit, current.gasPriceGwei * GWEI) (unchecked overflow on amount)"
+  },
+  {
+    "filename": "0x73dd069c299a5d691e9836243bcaec9c8c1d8734.sol",
+    "function": "calculate_base_mining_reward",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 1 && rewardperiods > 1",
+    "loop postcondition": "i == rewardperiods",
+    "loop invariant": "1 <= i && i < rewardperiods && total_reward = total_reward / 2 (potential precision loss, total_reward may reach 0)"
+  },
+  {
+    "filename": "0x7da90089a73edd14c75b0c827cb54f4248d47ecc.sol",
+    "function": "parseInt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && bresult.length > 0",
+    "loop postcondition": "i == bresult.length",
+    "loop invariant": "0 <= i && i < bresult.length && mint = mint*10 + digit (unchecked overflow)"
+  },
+  {
+    "filename": "0x7da90089a73edd14c75b0c827cb54f4248d47ecc.sol",
+    "function": "uint2str",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "j != 0",
+    "loop postcondition": "j == 0",
+    "loop invariant": "j > 0 && j /= 10 && k-- (underflow risk)"
+  },
+  {
+    "filename": "0x7da90089a73edd14c75b0c827cb54f4248d47ecc.sol",
+    "function": "searchSmallestInvestor",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x7da90089a73edd14c75b0c827cb54f4248d47ecc.sol",
+    "function": "profitDistribution",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 1 && numInvestors > 0",
+    "loop postcondition": "i == numInvestors + 1",
+    "loop invariant": "1 <= i && i <= numInvestors && investors[i].amountInvested += profitOfInvestor - lossesOfInvestor (unchecked underflow)"
+  },
+  {
+    "filename": "0x7da90089a73edd14c75b0c827cb54f4248d47ecc.sol",
+    "function": "forceDivestOfAllInvestors",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x7da90089a73edd14c75b0c827cb54f4248d47ecc.sol",
+    "function": "proposeEmergencyWithdrawal",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x7da90089a73edd14c75b0c827cb54f4248d47ecc.sol",
+    "function": "executeEmergencyWithdrawal",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 1 && numInvestors > 0",
+    "loop postcondition": "i == numInvestors + 1",
+    "loop invariant": "1 <= i && i <= numInvestors && numOfVotesInFavour++ (unchecked overflow)"
+  },
+  {
+    "filename": "0x80a92535c95d0e6cebece256df3c1b540c60dccb.sol",
+    "function": "Contest",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && prizeWinners.length > 0",
+    "loop postcondition": "i == prizeWinners.length",
+    "loop invariant": "0 <= i && i < prizeWinners.length && sumPrizes += prizeWinners[i] (unchecked overflow on sumPrizes)"
+  },
+  {
+    "filename": "0x80a92535c95d0e6cebece256df3c1b540c60dccb.sol",
+    "function": "vote",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && winners.length > 0",
+    "loop postcondition": "i == winners.length or break",
+    "loop invariant": "0 <= i && i < winners.length && nested loop with j uses getCandidatePosition (j-- with var type, underflow risk)"
+  },
+  {
+    "filename": "0x80a92535c95d0e6cebece256df3c1b540c60dccb.sol",
+    "function": "distributePrizes",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && winners.length > 0",
+    "loop postcondition": "i == winners.length",
+    "loop invariant": "0 <= i && i < winners.length && totalPrize/10000*prizeWinners[i] (unchecked arithmetic)"
+  },
+  {
+    "filename": "0x87d1ccf428832015d6108520d6d0909013753a62.sol",
+    "function": "removeStage",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == number && i < stages.length - 1",
+    "loop postcondition": "i == stages.length - 1",
+    "loop invariant": "number <= i && i < stages.length - 1 && stages[i] = stages[i+1]"
+  },
+  {
+    "filename": "0x87d1ccf428832015d6108520d6d0909013753a62.sol",
+    "function": "insertStage",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == stages.length - 2 && i > numberAfter",
+    "loop postcondition": "i == numberAfter",
+    "loop invariant": "numberAfter < i <= stages.length - 2 && stages[i+1] = stages[i] (i-- on uint underflow if numberAfter == 0)"
+  },
+  {
+    "filename": "0x87d1ccf428832015d6108520d6d0909013753a62.sol",
+    "function": "clearStages",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x87d1ccf428832015d6108520d6d0909013753a62.sol",
+    "function": "currentStage",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x8d2AAE6a7EB63Ba89c36e82385f096d41074Cd87.sol",
+    "function": "multiowned",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x8d2AAE6a7EB63Ba89c36e82385f096d41074Cd87.sol",
+    "function": "reorganizeOwners",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "free == 1 && m_numOwners >= 1",
+    "loop postcondition": "free >= m_numOwners",
+    "loop invariant": "1 <= free && free <= m_numOwners && m_numOwners-- (unchecked underflow)"
+  },
+  {
+    "filename": "0x8d2AAE6a7EB63Ba89c36e82385f096d41074Cd87.sol",
+    "function": "clearPending",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x8d80de8a78198396329dfa769ad54d24bf90e7aa.sol",
+    "function": "NamiMultiSigWallet",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x8d80de8a78198396329dfa769ad54d24bf90e7aa.sol",
+    "function": "removeOwner",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x8d80de8a78198396329dfa769ad54d24bf90e7aa.sol",
+    "function": "replaceOwner",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x8d80de8a78198396329dfa769ad54d24bf90e7aa.sol",
+    "function": "isConfirmed",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && owners.length > 0",
+    "loop postcondition": "i == owners.length or count == required",
+    "loop invariant": "0 <= i && i < owners.length && count += 1 (unchecked overflow)"
+  },
+  {
+    "filename": "0x8d80de8a78198396329dfa769ad54d24bf90e7aa.sol",
+    "function": "getConfirmationCount",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && owners.length > 0",
+    "loop postcondition": "i == owners.length",
+    "loop invariant": "0 <= i && i < owners.length && count += 1 (unchecked overflow)"
+  },
+  {
+    "filename": "0x8d80de8a78198396329dfa769ad54d24bf90e7aa.sol",
+    "function": "getTransactionCount",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && transactionCount > 0",
+    "loop postcondition": "i == transactionCount",
+    "loop invariant": "0 <= i && i < transactionCount && count += 1 (unchecked overflow)"
+  },
+  {
+    "filename": "0x8d80de8a78198396329dfa769ad54d24bf90e7aa.sol",
+    "function": "getConfirmations",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && owners.length > 0",
+    "loop postcondition": "i == owners.length",
+    "loop invariant": "0 <= i && i < owners.length && count += 1 (unchecked overflow)"
+  },
+  {
+    "filename": "0x8d80de8a78198396329dfa769ad54d24bf90e7aa.sol",
+    "function": "getTransactionIds",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && transactionCount > 0",
+    "loop postcondition": "i == transactionCount",
+    "loop invariant": "0 <= i && i < transactionCount && count += 1 (unchecked overflow)"
+  },
+  {
+    "filename": "0x92cB5F1FbabbcbDd891B9Cbd8E9a056c8c1eEbEF.sol",
+    "function": "populateFromItemRegistry",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x92cB5F1FbabbcbDd891B9Cbd8E9a056c8c1eEbEF.sol",
+    "function": "listMultipleItems",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0x92cB5F1FbabbcbDd891B9Cbd8E9a056c8c1eEbEF.sol",
+    "function": "balanceOf",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && listedItems.length > 0",
+    "loop postcondition": "i == listedItems.length",
+    "loop invariant": "0 <= i && i < listedItems.length && counter++ (unchecked overflow)"
+  },
+  {
+    "filename": "0x92cB5F1FbabbcbDd891B9Cbd8E9a056c8c1eEbEF.sol",
+    "function": "tokensOf",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && listedItems.length > 0",
+    "loop postcondition": "i == listedItems.length",
+    "loop invariant": "0 <= i && i < listedItems.length && itemCounter += 1 (unchecked overflow)"
+  },
+  {
+    "filename": "0x92cB5F1FbabbcbDd891B9Cbd8E9a056c8c1eEbEF.sol",
+    "function": "itemsForSaleLimit",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && _take > 0",
+    "loop postcondition": "i == _take",
+    "loop invariant": "0 <= i && i < _take && items[i] = listedItems[_from + i] (unchecked overflow on _from + i)"
+  },
+  {
+    "filename": "0x9AcA6aBFe63A5ae0Dc6258cefB65207eC990Aa4D.sol",
+    "function": "",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && i < 4",
+    "loop postcondition": "i == 4",
+    "loop invariant": "0 <= i && i < 4 && applicable_for_tier += tier_amount (unchecked overflow) && dgtWithBonus += dgtAmount * tier_bonus / 100 (unchecked overflow)"
+  },
+  {
+    "filename": "0x9BD8f4736877567E267ee445209a0b2aAFc01402.sol",
+    "function": "parseTimestamp",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 1 && timestamp valid",
+    "loop postcondition": "i == 12 or month found",
+    "loop invariant": "1 <= i && i <= 12 && secondsAccountedFor += secondsInMonth (unchecked overflow)"
+  },
+  {
+    "filename": "0x9BD8f4736877567E267ee445209a0b2aAFc01402.sol",
+    "function": "getYear",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "secondsAccountedFor > timestamp",
+    "loop postcondition": "secondsAccountedFor <= timestamp",
+    "loop invariant": "year >= ORIGIN_YEAR && year-- (uint16 underflow risk)"
+  },
+  {
+    "filename": "0x9BD8f4736877567E267ee445209a0b2aAFc01402.sol",
+    "function": "toTimestamp",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == ORIGIN_YEAR && i < year",
+    "loop postcondition": "i == year",
+    "loop invariant": "ORIGIN_YEAR <= i && i < year && timestamp += YEAR_IN_SECONDS or LEAP_YEAR_IN_SECONDS (unchecked overflow)"
+  },
+  {
+    "filename": "0x9b6BAA7DE8751328E8e0a8b872Ff8d36539b313D.sol",
+    "function": "parseInt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && bresult.length > 0",
+    "loop postcondition": "i == bresult.length",
+    "loop invariant": "0 <= i && i < bresult.length && mint = mint*10 + digit (unchecked overflow)"
+  },
+  {
+    "filename": "0xDfC328c19C8De45ac0117f836646378c10e0CdA3.sol",
+    "function": "changeMinBet",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0xDfC328c19C8De45ac0117f836646378c10e0CdA3.sol",
+    "function": "changeMaxBet",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0xDfC328c19C8De45ac0117f836646378c10e0CdA3.sol",
+    "function": "getSettings",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0xDfC328c19C8De45ac0117f836646378c10e0CdA3.sol",
+    "function": "totalBetValue",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && i < maxTypeBets",
+    "loop postcondition": "i == maxTypeBets or betsCount == 1",
+    "loop invariant": "0 <= i && i < maxTypeBets && totalBetsValue += getBetValueByGamble(...) (unchecked overflow)"
+  },
+  {
+    "filename": "0xDfC328c19C8De45ac0117f836646378c10e0CdA3.sol",
+    "function": "totalBetCount",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && i < maxTypeBets",
+    "loop postcondition": "i == maxTypeBets",
+    "loop invariant": "0 <= i && i < maxTypeBets && totalBets++ (unchecked overflow)"
+  },
+  {
+    "filename": "0xDfC328c19C8De45ac0117f836646378c10e0CdA3.sol",
+    "function": "placeBet",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == gamblesLength - 1 && gamblesLength > 0",
+    "loop postcondition": "i == 0 or condition breaks",
+    "loop invariant": "i > 0 && gamblesCountInCurrentBlock++ (unchecked overflow)"
+  },
+  {
+    "filename": "0xDfC328c19C8De45ac0117f836646378c10e0CdA3.sol",
+    "function": "ProcessGames",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0xDfC328c19C8De45ac0117f836646378c10e0CdA3.sol",
+    "function": "getGameResult",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && i < maxTypeBets",
+    "loop postcondition": "i == maxTypeBets or betsCount == 1",
+    "loop invariant": "0 <= i && i < maxTypeBets && totalWin += winMul * getBetValueByGamble(...) (unchecked overflow)"
+  },
+  {
+    "filename": "0xE5a04D98538231b0fAb9ABa60cd73cE4fF3039DF.sol",
+    "function": "parseInt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && bresult.length > 0",
+    "loop postcondition": "i == bresult.length",
+    "loop invariant": "0 <= i && i < bresult.length && mint = mint*10 + digit (unchecked overflow)"
+  },
+  {
+    "filename": "0xE5a04D98538231b0fAb9ABa60cd73cE4fF3039DF.sol",
+    "function": "uint2str",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "j != 0",
+    "loop postcondition": "j == 0",
+    "loop invariant": "j > 0 && j /= 10 && k-- (underflow risk)"
+  },
+  {
+    "filename": "0xa14c275277b788c20534066335e8bd3de77ffde4.sol",
+    "function": "removeStage",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == number && i < stages.length - 1",
+    "loop postcondition": "i == stages.length - 1",
+    "loop invariant": "number <= i && i < stages.length - 1 && stages[i] = stages[i+1]"
+  },
+  {
+    "filename": "0xa14c275277b788c20534066335e8bd3de77ffde4.sol",
+    "function": "insertStage",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == stages.length - 2 && i > numberAfter",
+    "loop postcondition": "i == numberAfter",
+    "loop invariant": "numberAfter < i <= stages.length-2 && stages[i+1] = stages[i] (underflow on i-- if numberAfter == 0)"
+  },
+  {
+    "filename": "0xa14c275277b788c20534066335e8bd3de77ffde4.sol",
+    "function": "clearStages",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0xa14c275277b788c20534066335e8bd3de77ffde4.sol",
+    "function": "currentStage",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0xa1c957c0210397d2d0296341627b74411756d476.sol",
+    "function": "getValueAt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "max > min && checkpoints.length > 1",
+    "loop postcondition": "max == min",
+    "loop invariant": "0 <= min && min <= max && mid = (max+min+1)/2 (potential overflow on max+min+1)"
+  },
+  {
+    "filename": "0xa33c4a314faa9684eeffa6ba334688001ea99bbc.sol",
+    "function": "calculateUpdateProfit",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "r == acc.lastUserUpdateRound && r < currentRound",
+    "loop postcondition": "r == currentRound",
+    "loop invariant": "acc.lastUserUpdateRound <= r && r < currentRound && acc.profitTotal *= 2 (unchecked overflow)"
+  },
+  {
+    "filename": "0xa33c4a314faa9684eeffa6ba334688001ea99bbc.sol",
+    "function": "deposit",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "currentRoundCollected + money2add >= currentLimit",
+    "loop postcondition": "money2add == 0 or currentRoundCollected + money2add < currentLimit",
+    "loop invariant": "money2add >= 0 && currentLimit - currentRoundCollected subtracted (unchecked underflow if currentRoundCollected > currentLimit)"
+  },
+  {
+    "filename": "0xadaac4cb430f4f4aa0d60741bc263f3dfec0790a.sol",
+    "function": "getValueAt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "max > min && checkpoints.length > 1",
+    "loop postcondition": "max == min",
+    "loop invariant": "0 <= min && min <= max && mid = (max+min+1)/2 (potential overflow on max+min+1)"
+  },
+  {
+    "filename": "0xaf7aea249098f2c2f50cc11d4000ccf798194373.sol",
+    "function": "toZT",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && raised > minAmount",
+    "loop postcondition": "i == multiplier",
+    "loop invariant": "0 <= i && i < multiplier && ztAmount = ztAmount * 965936329 / 10**9 (repeated multiplication, precision loss and unchecked overflow)"
+  },
+  {
+    "filename": "0xb104df39250112eda59b27f5db7013c7ee132d50.sol",
+    "function": "parseTimestamp",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 1 && timestamp valid",
+    "loop postcondition": "i == 12 or month found",
+    "loop invariant": "1 <= i && i <= 12 && secondsAccountedFor += secondsInMonth (unchecked overflow)"
+  },
+  {
+    "filename": "0xb104df39250112eda59b27f5db7013c7ee132d50.sol",
+    "function": "getYear",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "secondsAccountedFor > timestamp",
+    "loop postcondition": "secondsAccountedFor <= timestamp",
+    "loop invariant": "year >= ORIGIN_YEAR && year-- (uint16 underflow risk)"
+  },
+  {
+    "filename": "0xb28a3dd24036151c819c6d401f7a222d9aa3671b.sol",
+    "function": "_axiesPrice",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && quantity > 0",
+    "loop postcondition": "i == quantity",
+    "loop invariant": "0 <= i && i < quantity && totalPrice += currentPrice (unchecked overflow) && currentPrice = nextPrice (unchecked overflow on currentPrice.add(priceIncrement))"
+  },
+  {
+    "filename": "0xb3775fb83f7d12a36e0475abdd1fca35c091efbe.sol",
+    "function": "sqrt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "z < y && y == x",
+    "loop postcondition": "z >= y",
+    "loop invariant": "z = (x/z + z)/2 (unchecked overflow on x/z + z)"
+  },
+  {
+    "filename": "0xb8bf73550f251562d308882e032225a700a7b9bc.sol",
+    "function": "approveMultiple",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0xb8bf73550f251562d308882e032225a700a7b9bc.sol",
+    "function": "transferMultiple",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0xb8bf73550f251562d308882e032225a700a7b9bc.sol",
+    "function": "takeOwnershipMultiple",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0xb8bf73550f251562d308882e032225a700a7b9bc.sol",
+    "function": "deedsOfOwner",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "deedNumber == 0 && totalDeeds > 0",
+    "loop postcondition": "deedNumber == totalDeeds",
+    "loop invariant": "0 <= deedNumber && deedNumber < totalDeeds && resultIndex++ (unchecked overflow)"
+  },
+  {
+    "filename": "0xb8bf73550f251562d308882e032225a700a7b9bc.sol",
+    "function": "deedOfOwnerByIndex",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "deedNumber == 0 && totalDeeds > 0",
+    "loop postcondition": "deedNumber == totalDeeds or seen == _index",
+    "loop invariant": "0 <= deedNumber && deedNumber < totalDeeds && seen++ (unchecked overflow)"
+  },
+  {
+    "filename": "0xb8bf73550f251562d308882e032225a700a7b9bc.sol",
+    "function": "deedUri",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && i < 5",
+    "loop postcondition": "i == 5",
+    "loop invariant": "0 <= i && i < 5 && x / 10**i and y / 10**i (10**i may overflow for large i, but bounded by 5)"
+  },
+  {
+    "filename": "0xb8bf73550f251562d308882e032225a700a7b9bc.sol",
+    "function": "claimPlotMultipleWithData",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && _deedIds.length > 0",
+    "loop postcondition": "i == _deedIds.length",
+    "loop invariant": "0 <= i && i < _deedIds.length && etherRequired += claimDividends (unchecked overflow)"
+  },
+  {
+    "filename": "0xba2184520a1cc49a6159c57e61e1844e085615b6.sol",
+    "function": "addAllocationPartOne",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "partPos == partAllocations.length - 2 && partPos >= 0",
+    "loop postcondition": "partPos == 0 or partPos == partAllocations.length - numSteps",
+    "loop invariant": "0 <= partPos && partAllocations[partPos].amount updated (unchecked overflow on amount += partAllocations[partL-1].amount)"
+  },
+  {
+    "filename": "0xba2184520a1cc49a6159c57e61e1844e085615b6.sol",
+    "function": "addAllocationPartTwo",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && numSteps > 0 && partPos > 0",
+    "loop postcondition": "i == numSteps or partPos == 0",
+    "loop invariant": "0 <= i && i < numSteps && partPos-- && partAllocations[partPos].amount += ... (unchecked overflow)"
+  },
+  {
+    "filename": "0xbbc5d510bab53b2199fb17fe1d896eb78911e103.sol",
+    "function": "parseInt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && bresult.length > 0",
+    "loop postcondition": "i == bresult.length",
+    "loop invariant": "0 <= i && i < bresult.length && mint = mint*10 + digit (unchecked overflow)"
+  },
+  {
+    "filename": "0xbbc5d510bab53b2199fb17fe1d896eb78911e103.sol",
+    "function": "uint2str",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "j != 0",
+    "loop postcondition": "j == 0",
+    "loop invariant": "j > 0 && j /= 10 && k-- (underflow risk)"
+  },
+  {
+    "filename": "0xbd6bfb97124bce7cab703e6aa6968706c5f0feea.sol",
+    "function": "getValueAt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "max > min && checkpoints.length > 1",
+    "loop postcondition": "max == min",
+    "loop invariant": "0 <= min && min <= max && mid = (max+min+1)/2 (potential overflow on max+min+1)"
+  },
+  {
+    "filename": "0xc23f76aea00b775aadc8504ccb22468f4fd2261a.sol",
+    "function": "openAll",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == len - 1 && len > 0",
+    "loop postcondition": "i == 0 or hash == 0",
+    "loop invariant": "i >= 0 && i <= len - 1 && i-- (uint underflow when i==0)"
+  },
+  {
+    "filename": "0xc23f76aea00b775aadc8504ccb22468f4fd2261a.sol",
+    "function": "purchaseCrates",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0xc23f76aea00b775aadc8504ccb22468f4fd2261a.sol",
+    "function": "_calculatePayment",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 1 && _cratesToBuy > 1",
+    "loop postcondition": "i == _cratesToBuy",
+    "loop invariant": "1 <= i && i < _cratesToBuy && tempPrice += currentPrice + appreciationRateWei * i (unchecked overflow)"
+  },
+  {
+    "filename": "0xc6e095f5fB53339D8F4C7f576ccD37bE05E5B67E.sol",
+    "function": "distribute",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 1 && i <= 10",
+    "loop postcondition": "i == 10",
+    "loop invariant": "1 <= i && i <= 10 && inner while: parent-- via division (unsafe arithmetic on parent)"
+  },
+  {
+    "filename": "0xc7d784274aaa0010f0c3dedd10eb66d49b7e4098.sol",
+    "function": "parseInt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && bresult.length > 0",
+    "loop postcondition": "i == bresult.length",
+    "loop invariant": "0 <= i && i < bresult.length && mint = mint*10 + digit (unchecked overflow)"
+  },
+  {
+    "filename": "0xca6bea8e144b0a6aebbb412e6ad0e7ff1959235e.sol",
+    "function": "judgeReleaseRecordExist",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0xca6bea8e144b0a6aebbb412e6ad0e7ff1959235e.sol",
+    "function": "unfreeze",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "index == 0 && frozenRecordsCount > 0",
+    "loop postcondition": "index == frozenRecordsCount",
+    "loop invariant": "0 <= index && index < frozenRecordsCount && unfreezeAmount += frozenRecords[index].amount (unchecked overflow)"
+  },
+  {
+    "filename": "0xcaef67f72114b4d2b4f43e7407455285b7de8de5.sol",
+    "function": "commitDividend",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "last < dividendPeriod && balances[_who] != 0",
+    "loop postcondition": "last == dividendPeriod",
+    "loop invariant": "last <= dividendPeriod && balance += share * dividends[last] (unchecked overflow)"
+  },
+  {
+    "filename": "0xcaef67f72114b4d2b4f43e7407455285b7de8de5.sol",
+    "function": "addHashes",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "n < hashes.length",
+    "loop postcondition": "n == hashes.length",
+    "loop invariant": "n <= hashes.length && n++ (unchecked overflow on n)"
+  },
+  {
+    "filename": "0xcaef67f72114b4d2b4f43e7407455285b7de8de5.sol",
+    "function": "putHashes",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0xcc5f26bf69b259b495a15427384e7f9668917d56.sol",
+    "function": "judgeReleaseRecordExist",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0xcc5f26bf69b259b495a15427384e7f9668917d56.sol",
+    "function": "unfreeze",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "index == 0 && frozenRecordsCount > 0",
+    "loop postcondition": "index == frozenRecordsCount",
+    "loop invariant": "0 <= index && index < frozenRecordsCount && unfreezeAmount += frozenRecords[index].amount (unchecked overflow)"
+  },
+  {
+    "filename": "0xcce9fd6aea9fc618b98198b13599d2a0419534bb.sol",
+    "function": "getValueAt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "max > min && checkpoints.length > 1",
+    "loop postcondition": "max == min",
+    "loop invariant": "0 <= min && min <= max && mid = (max+min+1)/2 (potential overflow on max+min+1)"
+  },
+  {
+    "filename": "0xd780ae2bf04cd96e577d3d014762f831d97129d0.sol",
+    "function": "parseTimestamp",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 1 && timestamp valid",
+    "loop postcondition": "i == 12 or month found",
+    "loop invariant": "1 <= i && i <= 12 && secondsAccountedFor += secondsInMonth (unchecked overflow)"
+  },
+  {
+    "filename": "0xd780ae2bf04cd96e577d3d014762f831d97129d0.sol",
+    "function": "getYear",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "secondsAccountedFor > timestamp",
+    "loop postcondition": "secondsAccountedFor <= timestamp",
+    "loop invariant": "year >= ORIGIN_YEAR && year-- (uint16 underflow risk)"
+  },
+  {
+    "filename": "0xd780ae2bf04cd96e577d3d014762f831d97129d0.sol",
+    "function": "toTimestamp",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == ORIGIN_YEAR && i < year",
+    "loop postcondition": "i == year",
+    "loop invariant": "ORIGIN_YEAR <= i && i < year && timestamp += YEAR_IN_SECONDS or LEAP_YEAR_IN_SECONDS (unchecked overflow)"
+  },
+  {
+    "filename": "0xd7e4ad7c318ffbafbf602e32e089e7e2326a2581.sol",
+    "function": "judgeReleaseRecordExist",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "0xd7e4ad7c318ffbafbf602e32e089e7e2326a2581.sol",
+    "function": "unfreeze",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "index == 0 && frozenRecordsCount > 0",
+    "loop postcondition": "index == frozenRecordsCount",
+    "loop invariant": "0 <= index && index < frozenRecordsCount && unfreezeAmount += frozenRecords[index].amount (unchecked overflow)"
+  },
+  {
+    "filename": "0xdd98b423dc61a756e1070de151b1485425505954.sol",
+    "function": "parseTimestamp",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 1 && timestamp valid",
+    "loop postcondition": "i == 12 or month found",
+    "loop invariant": "1 <= i && i <= 12 && secondsAccountedFor += secondsInMonth (unchecked overflow)"
+  },
+  {
+    "filename": "0xdd98b423dc61a756e1070de151b1485425505954.sol",
+    "function": "getYear",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "secondsAccountedFor > timestamp",
+    "loop postcondition": "secondsAccountedFor <= timestamp",
+    "loop invariant": "year >= ORIGIN_YEAR && year-- (uint16 underflow risk)"
+  },
+  {
+    "filename": "0xdd98b423dc61a756e1070de151b1485425505954.sol",
+    "function": "toTimestamp",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == ORIGIN_YEAR && i < year",
+    "loop postcondition": "i == year",
+    "loop invariant": "ORIGIN_YEAR <= i && i < year && timestamp += YEAR_IN_SECONDS or LEAP_YEAR_IN_SECONDS (unchecked overflow)"
+  },
+  {
+    "filename": "0xddf0d0b9914d530e0b743808249d9af901f1bd01.sol",
+    "function": "getValueAt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "max > min && checkpoints.length > 1",
+    "loop postcondition": "max == min",
+    "loop invariant": "0 <= min && min <= max && mid = (max+min+1)/2 (potential overflow on max+min+1)"
+  },
+  {
+    "filename": "0xdf6164efd12678bf6a7d5a1ddf73c831493f6574.sol",
+    "function": "parseTimestamp",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 1 && timestamp valid",
+    "loop postcondition": "i == 12 or month found",
+    "loop invariant": "1 <= i && i <= 12 && secondsAccountedFor += secondsInMonth (unchecked overflow)"
+  },
+  {
+    "filename": "0xdf6164efd12678bf6a7d5a1ddf73c831493f6574.sol",
+    "function": "getYear",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "secondsAccountedFor > timestamp",
+    "loop postcondition": "secondsAccountedFor <= timestamp",
+    "loop invariant": "year >= ORIGIN_YEAR && year-- (uint16 underflow risk)"
+  },
+  {
+    "filename": "0xdf6164efd12678bf6a7d5a1ddf73c831493f6574.sol",
+    "function": "toTimestamp",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == ORIGIN_YEAR && i < year",
+    "loop postcondition": "i == year",
+    "loop invariant": "ORIGIN_YEAR <= i && i < year && timestamp += YEAR_IN_SECONDS or LEAP_YEAR_IN_SECONDS (unchecked overflow)"
+  },
+  {
+    "filename": "0xe1f243a9abfeef646be6bef7b8c2018276574294.sol",
+    "function": "parseInt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && bresult.length > 0",
+    "loop postcondition": "i == bresult.length",
+    "loop invariant": "0 <= i && i < bresult.length && mint = mint*10 + digit (unchecked overflow)"
+  },
+  {
+    "filename": "0xe642b6f79041c60d8447679b3a499f18d8b03b81.sol",
+    "function": "parseTimestamp",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 1 && timestamp valid",
+    "loop postcondition": "i == 12 or month found",
+    "loop invariant": "1 <= i && i <= 12 && secondsAccountedFor += secondsInMonth (unchecked overflow)"
+  },
+  {
+    "filename": "0xe642b6f79041c60d8447679b3a499f18d8b03b81.sol",
+    "function": "getYear",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "secondsAccountedFor > timestamp",
+    "loop postcondition": "secondsAccountedFor <= timestamp",
+    "loop invariant": "year >= ORIGIN_YEAR && year-- (uint16 underflow risk)"
+  },
+  {
+    "filename": "0xe642b6f79041c60d8447679b3a499f18d8b03b81.sol",
+    "function": "toTimestamp",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == ORIGIN_YEAR && i < year",
+    "loop postcondition": "i == year",
+    "loop invariant": "ORIGIN_YEAR <= i && i < year && timestamp += YEAR_IN_SECONDS or LEAP_YEAR_IN_SECONDS (unchecked overflow)"
+  },
+  {
+    "filename": "0xe6517b766e6ee07f91b517435ed855926bcb1aae.sol",
+    "function": "parseTimestamp",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 1 && timestamp valid",
+    "loop postcondition": "i == 12 or month found",
+    "loop invariant": "1 <= i && i <= 12 && secondsAccountedFor += secondsInMonth (unchecked overflow)"
+  },
+  {
+    "filename": "0xe6517b766e6ee07f91b517435ed855926bcb1aae.sol",
+    "function": "getYear",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "secondsAccountedFor > timestamp",
+    "loop postcondition": "secondsAccountedFor <= timestamp",
+    "loop invariant": "year >= ORIGIN_YEAR && year-- (uint16 underflow risk)"
+  },
+  {
+    "filename": "0xe6517b766e6ee07f91b517435ed855926bcb1aae.sol",
+    "function": "toTimestamp",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == ORIGIN_YEAR && i < year",
+    "loop postcondition": "i == year",
+    "loop invariant": "ORIGIN_YEAR <= i && i < year && timestamp += YEAR_IN_SECONDS or LEAP_YEAR_IN_SECONDS (unchecked overflow)"
+  },
+  {
+    "filename": "0xe8a51be86ad96447d45ddeddc55013f25157688c.sol",
+    "function": "parseAddr",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 2 && tmp.length >= 42",
+    "loop postcondition": "i == 42",
+    "loop invariant": "2 <= i && i <= 42 && iaddr *= 256 + b1*16+b2 (unchecked overflow)"
+  },
+  {
+    "filename": "0xe8a51be86ad96447d45ddeddc55013f25157688c.sol",
+    "function": "parseInt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && bresult.length > 0",
+    "loop postcondition": "i == bresult.length",
+    "loop invariant": "0 <= i && i < bresult.length && mint = mint*10 + digit (unchecked overflow)"
+  },
+  {
+    "filename": "0xe8a51be86ad96447d45ddeddc55013f25157688c.sol",
+    "function": "uint2str",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "j != 0",
+    "loop postcondition": "j == 0",
+    "loop invariant": "j > 0 && j /= 10 && k-- (underflow risk)"
+  },
+  {
+    "filename": "0xe9ef26c4e9761e2305f455a0e0d4cd286e2d13a1.sol",
+    "function": "parseTimestamp",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 1 && timestamp valid",
+    "loop postcondition": "i == 12 or month found",
+    "loop invariant": "1 <= i && i <= 12 && secondsAccountedFor += secondsInMonth (unchecked overflow)"
+  },
+  {
+    "filename": "0xe9ef26c4e9761e2305f455a0e0d4cd286e2d13a1.sol",
+    "function": "getYear",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "secondsAccountedFor > timestamp",
+    "loop postcondition": "secondsAccountedFor <= timestamp",
+    "loop invariant": "year >= ORIGIN_YEAR && year-- (uint16 underflow risk)"
+  },
+  {
+    "filename": "0xe9ef26c4e9761e2305f455a0e0d4cd286e2d13a1.sol",
+    "function": "toTimestamp",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == ORIGIN_YEAR && i < year",
+    "loop postcondition": "i == year",
+    "loop invariant": "ORIGIN_YEAR <= i && i < year && timestamp += YEAR_IN_SECONDS or LEAP_YEAR_IN_SECONDS (unchecked overflow)"
+  },
+  {
+    "filename": "0xea450e48e8d0da4332516a12c63c2232450caf6a.sol",
+    "function": "parseTimestamp",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 1 && timestamp valid",
+    "loop postcondition": "i == 12 or month found",
+    "loop invariant": "1 <= i && i <= 12 && secondsAccountedFor += secondsInMonth (unchecked overflow)"
+  },
+  {
+    "filename": "0xea450e48e8d0da4332516a12c63c2232450caf6a.sol",
+    "function": "getYear",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "secondsAccountedFor > timestamp",
+    "loop postcondition": "secondsAccountedFor <= timestamp",
+    "loop invariant": "year >= ORIGIN_YEAR && year-- (uint16 underflow risk)"
+  },
+  {
+    "filename": "0xea450e48e8d0da4332516a12c63c2232450caf6a.sol",
+    "function": "toTimestamp",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == ORIGIN_YEAR && i < year",
+    "loop postcondition": "i == year",
+    "loop invariant": "ORIGIN_YEAR <= i && i < year && timestamp += YEAR_IN_SECONDS or LEAP_YEAR_IN_SECONDS (unchecked overflow)"
+  },
+  {
+    "filename": "0xf31619a15518dce0613a514e6672d1f84f6e7fe7.sol",
+    "function": "parseAddr",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 2 && tmp.length >= 42",
+    "loop postcondition": "i == 42",
+    "loop invariant": "2 <= i && i <= 42 && iaddr *= 256 + b1*16+b2 (unchecked overflow)"
+  },
+  {
+    "filename": "0xf31619a15518dce0613a514e6672d1f84f6e7fe7.sol",
+    "function": "parseInt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && bresult.length > 0",
+    "loop postcondition": "i == bresult.length",
+    "loop invariant": "0 <= i && i < bresult.length && mint = mint*10 + digit (unchecked overflow)"
+  },
+  {
+    "filename": "0xf31619a15518dce0613a514e6672d1f84f6e7fe7.sol",
+    "function": "uint2str",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "j != 0",
+    "loop postcondition": "j == 0",
+    "loop invariant": "j > 0 && j /= 10 && k-- (underflow risk)"
+  },
+  {
+    "filename": "0xfc668AE14b0F7702c04b105448fE733D96C558DF.sol",
+    "function": "parseAddr",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 2 && tmp.length >= 42",
+    "loop postcondition": "i == 42",
+    "loop invariant": "2 <= i && i <= 42 && iaddr *= 256 + b1*16+b2 (unchecked overflow)"
+  },
+  {
+    "filename": "0xfc668AE14b0F7702c04b105448fE733D96C558DF.sol",
+    "function": "parseInt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && bresult.length > 0",
+    "loop postcondition": "i == bresult.length",
+    "loop invariant": "0 <= i && i < bresult.length && mint = mint*10 + digit (unchecked overflow)"
+  },
+  {
+    "filename": "0xfc668AE14b0F7702c04b105448fE733D96C558DF.sol",
+    "function": "uint2str",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "j != 0",
+    "loop postcondition": "j == 0",
+    "loop invariant": "j > 0 && j /= 10 && k-- (underflow risk)"
+  }
+]

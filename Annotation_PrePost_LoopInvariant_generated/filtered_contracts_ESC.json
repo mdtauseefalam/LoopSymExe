@@ -1,0 +1,3362 @@
+[
+  {
+    "filename": "10080.sol",
+    "function": "ln",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "x >= 1.5*(10**18 && next > epsilon",
+    "loop postcondition": "!(x >= 1.5*(10**18) && !(next > epsilon)",
+    "loop invariant": "x >= 1.5*(10**18 && next > epsilon"
+  },
+  {
+    "filename": "10165.sol",
+    "function": "initHolders",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _addrs.length",
+    "loop postcondition": "i >= _addrs.length",
+    "loop invariant": "0 <= i && i <= _addrs.length"
+  },
+  {
+    "filename": "10165.sol",
+    "function": "distribute",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < holders.length",
+    "loop postcondition": "i >= holders.length",
+    "loop invariant": "0 <= i && i <= holders.length"
+  },
+  {
+    "filename": "10165.sol",
+    "function": "distributeToken",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < holders.length",
+    "loop postcondition": "i >= holders.length",
+    "loop invariant": "0 <= i && i <= holders.length"
+  },
+  {
+    "filename": "10165.sol",
+    "function": "Locker",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < numBeneficiaries",
+    "loop postcondition": "i >= numBeneficiaries",
+    "loop invariant": "0 <= i && i <= numBeneficiaries"
+  },
+  {
+    "filename": "10165.sol",
+    "function": "lock",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < len - 1",
+    "loop postcondition": "i >= len - 1",
+    "loop invariant": "0 <= i && i <= len - 1"
+  },
+  {
+    "filename": "10165.sol",
+    "function": "getVariableReleasableAmount",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "1 satisfies i >= 0",
+    "loop postcondition": "i <== 0",
+    "loop invariant": "0 <= i && i <= 0"
+  },
+  {
+    "filename": "10165.sol",
+    "function": "setBonusesForTimes",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i + 1 < times.length",
+    "loop postcondition": "i + 1 >= times.length",
+    "loop invariant": "0 <= i && i <= times.length"
+  },
+  {
+    "filename": "10165.sol",
+    "function": "setBonusesForAmounts",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i + 1 < amounts.length",
+    "loop postcondition": "i + 1 >= amounts.length",
+    "loop invariant": "0 <= i && i <= amounts.length"
+  },
+  {
+    "filename": "10165.sol",
+    "function": "computeTimeBonus",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < BONUS_TIMES.length",
+    "loop postcondition": "i >= BONUS_TIMES.length",
+    "loop invariant": "0 <= i && i <= BONUS_TIMES.length"
+  },
+  {
+    "filename": "10165.sol",
+    "function": "computeAmountBonus",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < BONUS_AMOUNTS.length",
+    "loop postcondition": "i >= BONUS_AMOUNTS.length",
+    "loop invariant": "0 <= i && i <= BONUS_AMOUNTS.length"
+  },
+  {
+    "filename": "10165.sol",
+    "function": "registerByList",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _addrs.length",
+    "loop postcondition": "i >= _addrs.length",
+    "loop invariant": "0 <= i && i <= _addrs.length"
+  },
+  {
+    "filename": "10165.sol",
+    "function": "unregisterByList",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _addrs.length",
+    "loop postcondition": "i >= _addrs.length",
+    "loop invariant": "0 <= i && i <= _addrs.length"
+  },
+  {
+    "filename": "10165.sol",
+    "function": "initStages",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < len",
+    "loop postcondition": "i >= len",
+    "loop invariant": "0 <= i && i <= len"
+  },
+  {
+    "filename": "10165.sol",
+    "function": "getStageIndex",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies currentStage < stages.length",
+    "loop postcondition": "currentStage >= stages.length",
+    "loop invariant": "0 <= currentStage && currentStage <= stages.length"
+  },
+  {
+    "filename": "10165.sol",
+    "function": "validPeriods",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < stages.length - 1",
+    "loop postcondition": "i >= stages.length - 1",
+    "loop invariant": "0 <= i && i <= stages.length - 1"
+  },
+  {
+    "filename": "10469.sol",
+    "function": "fracExp",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _p",
+    "loop postcondition": "i >= _p",
+    "loop invariant": "0 <= i && i <= _p"
+  },
+  {
+    "filename": "10469.sol",
+    "function": "ln",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "MAX_PRECISION satisfies i > 0",
+    "loop postcondition": "i <= 0",
+    "loop invariant": "0 <= i && i <= 0"
+  },
+  {
+    "filename": "10469.sol",
+    "function": "floorLog2",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "128 satisfies s > 0 && _n > 1",
+    "loop postcondition": "s <= 0 && !(_n > 1)",
+    "loop invariant": "0 <= s && s <= 0 && _n > 1"
+  },
+  {
+    "filename": "10970.sol",
+    "function": "MultiOwnable",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _otherOwners.length",
+    "loop postcondition": "i >= _otherOwners.length",
+    "loop invariant": "0 <= i && i <= _otherOwners.length"
+  },
+  {
+    "filename": "10970.sol",
+    "function": "isOwner",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < m_numOwners",
+    "loop postcondition": "i >= m_numOwners",
+    "loop invariant": "0 <= i && i <= m_numOwners"
+  },
+  {
+    "filename": "10970.sol",
+    "function": "checkAndConfirm",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < m_numOwners && 0 satisfies i < m_numOwners",
+    "loop postcondition": "i >= m_numOwners && i >= m_numOwners",
+    "loop invariant": "0 <= i && i <= m_numOwners && 0 <= i && i <= m_numOwners"
+  },
+  {
+    "filename": "11105.sol",
+    "function": "unlockBatchOfAddressesAfterITO",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < addressesToUnlock.length",
+    "loop postcondition": "i >= addressesToUnlock.length",
+    "loop invariant": "0 <= i && i <= addressesToUnlock.length"
+  },
+  {
+    "filename": "11105.sol",
+    "function": "bytesToAddress",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "20 satisfies i > 0",
+    "loop postcondition": "i <= 0",
+    "loop invariant": "0 <= i && i <= 0"
+  },
+  {
+    "filename": "11105.sol",
+    "function": "removeMilestone",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "number satisfies i < milestones.length - 1",
+    "loop postcondition": "i >= milestones.length - 1",
+    "loop invariant": "0 <= i && i <= milestones.length - 1"
+  },
+  {
+    "filename": "11105.sol",
+    "function": "insertMilestone",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "2 satisfies i > numberAfter",
+    "loop postcondition": "i <= numberAfter",
+    "loop invariant": "0 <= i && i <= numberAfter"
+  },
+  {
+    "filename": "11105.sol",
+    "function": "clearMilestones",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < milestones.length",
+    "loop postcondition": "i >= milestones.length",
+    "loop invariant": "0 <= i && i <= milestones.length"
+  },
+  {
+    "filename": "11105.sol",
+    "function": "currentMilestone",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i < milestones.length",
+    "loop postcondition": "i >= milestones.length",
+    "loop invariant": "0 <= i && i <= milestones.length"
+  },
+  {
+    "filename": "11251.sol",
+    "function": "getValueAt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "max > min",
+    "loop postcondition": "!(max > min)",
+    "loop invariant": "max > min"
+  },
+  {
+    "filename": "11251.sol",
+    "function": "getClaimRate",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < pow - 1",
+    "loop postcondition": "i >= pow - 1",
+    "loop invariant": "0 <= i && i <= pow - 1"
+  },
+  {
+    "filename": "1136.sol",
+    "function": "bytesToAddress",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "20 satisfies i > 0",
+    "loop postcondition": "i <= 0",
+    "loop invariant": "0 <= i && i <= 0"
+  },
+  {
+    "filename": "11459.sol",
+    "function": "bytesToAddress",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "20 satisfies i > 0",
+    "loop postcondition": "i <= 0",
+    "loop invariant": "0 <= i && i <= 0"
+  },
+  {
+    "filename": "11459.sol",
+    "function": "getValueBonus",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < valueBonuses.length",
+    "loop postcondition": "i >= valueBonuses.length",
+    "loop invariant": "0 <= i && i <= valueBonuses.length"
+  },
+  {
+    "filename": "11459.sol",
+    "function": "removeMilestone",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "number satisfies i < milestones.length - 1",
+    "loop postcondition": "i >= milestones.length - 1",
+    "loop invariant": "0 <= i && i <= milestones.length - 1"
+  },
+  {
+    "filename": "11459.sol",
+    "function": "insertMilestone",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "2 satisfies i > numberAfter",
+    "loop postcondition": "i <= numberAfter",
+    "loop invariant": "0 <= i && i <= numberAfter"
+  },
+  {
+    "filename": "11459.sol",
+    "function": "clearMilestones",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < milestones.length",
+    "loop postcondition": "i >= milestones.length",
+    "loop invariant": "0 <= i && i <= milestones.length"
+  },
+  {
+    "filename": "11459.sol",
+    "function": "currentMilestone",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i < milestones.length",
+    "loop postcondition": "i >= milestones.length",
+    "loop invariant": "0 <= i && i <= milestones.length"
+  },
+  {
+    "filename": "11541.sol",
+    "function": "_getCurrentBonus",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < bonusEndDates.length",
+    "loop postcondition": "i >= bonusEndDates.length",
+    "loop invariant": "0 <= i && i <= bonusEndDates.length"
+  },
+  {
+    "filename": "11541.sol",
+    "function": "distributeTeamTokens",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < advisorWallets.length",
+    "loop postcondition": "i >= advisorWallets.length",
+    "loop invariant": "0 <= i && i <= advisorWallets.length"
+  },
+  {
+    "filename": "11732.sol",
+    "function": "mintTokensBatch",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < to.length",
+    "loop postcondition": "i >= to.length",
+    "loop invariant": "0 <= i && i <= to.length"
+  },
+  {
+    "filename": "11732.sol",
+    "function": "mintExtendedTokens",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < wallets.length && 0 satisfies k < wallets.length",
+    "loop postcondition": "i >= wallets.length && k >= wallets.length",
+    "loop invariant": "0 <= i && i <= wallets.length && 0 <= k && k <= wallets.length"
+  },
+  {
+    "filename": "11732.sol",
+    "function": "removeMilestone",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "number satisfies i < milestones.length - 1",
+    "loop postcondition": "i >= milestones.length - 1",
+    "loop invariant": "0 <= i && i <= milestones.length - 1"
+  },
+  {
+    "filename": "11732.sol",
+    "function": "insertMilestone",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "2 satisfies i > numberAfter",
+    "loop postcondition": "i <= numberAfter",
+    "loop invariant": "0 <= i && i <= numberAfter"
+  },
+  {
+    "filename": "11732.sol",
+    "function": "clearMilestones",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < milestones.length",
+    "loop postcondition": "i >= milestones.length",
+    "loop invariant": "0 <= i && i <= milestones.length"
+  },
+  {
+    "filename": "11732.sol",
+    "function": "currentMilestone",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i < milestones.length",
+    "loop postcondition": "i >= milestones.length",
+    "loop invariant": "0 <= i && i <= milestones.length"
+  },
+  {
+    "filename": "11732.sol",
+    "function": "finish",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < wallets.length",
+    "loop postcondition": "i >= wallets.length",
+    "loop invariant": "0 <= i && i <= wallets.length"
+  },
+  {
+    "filename": "11766.sol",
+    "function": "freezingCount",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "release != 0",
+    "loop postcondition": "release == 0",
+    "loop invariant": "release != 0"
+  },
+  {
+    "filename": "11766.sol",
+    "function": "getFreezing",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _index + 1",
+    "loop postcondition": "i >= _index + 1",
+    "loop invariant": "0 <= i && i <= _index + 1"
+  },
+  {
+    "filename": "11766.sol",
+    "function": "releaseAll",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "release != 0 && block.timestamp > release",
+    "loop postcondition": "release == 0 && block.timestamp > release",
+    "loop invariant": "release != 0 && block.timestamp > release"
+  },
+  {
+    "filename": "11766.sol",
+    "function": "freeze",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "11766.sol",
+    "function": "getBonusRate",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < 1",
+    "loop postcondition": "i >= 1",
+    "loop invariant": "0 <= i && i <= 1"
+  },
+  {
+    "filename": "11766.sol",
+    "function": "init",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < addresses.length",
+    "loop postcondition": "i >= addresses.length",
+    "loop invariant": "0 <= i && i <= addresses.length"
+  },
+  {
+    "filename": "1233.sol",
+    "function": "addAddressesToWhitelist",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < addrs.length",
+    "loop postcondition": "i >= addrs.length",
+    "loop invariant": "0 <= i && i <= addrs.length"
+  },
+  {
+    "filename": "1233.sol",
+    "function": "removeAddressesFromWhitelist",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < addrs.length",
+    "loop postcondition": "i >= addrs.length",
+    "loop invariant": "0 <= i && i <= addrs.length"
+  },
+  {
+    "filename": "1233.sol",
+    "function": "getValueAt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "max > min",
+    "loop postcondition": "!(max > min)",
+    "loop invariant": "max > min"
+  },
+  {
+    "filename": "1233.sol",
+    "function": "initTiers",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i < totalTiers",
+    "loop postcondition": "i >= totalTiers",
+    "loop invariant": "0 <= i && i <= totalTiers"
+  },
+  {
+    "filename": "1233.sol",
+    "function": "setCapForParticipants",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i < participants.length",
+    "loop postcondition": "i >= participants.length",
+    "loop invariant": "0 <= i && i <= participants.length"
+  },
+  {
+    "filename": "1233.sol",
+    "function": "getTier",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < totalTiers",
+    "loop postcondition": "i >= totalTiers",
+    "loop invariant": "0 <= i && i <= totalTiers"
+  },
+  {
+    "filename": "1272.sol",
+    "function": "allocateFunds",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "1 satisfies i < length",
+    "loop postcondition": "i >= length",
+    "loop invariant": "0 <= i && i <= length"
+  },
+  {
+    "filename": "1272.sol",
+    "function": "calculateReward",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "1 satisfies i <= 4",
+    "loop postcondition": "i >== 4",
+    "loop invariant": "0 <= i && i <= 4"
+  },
+  {
+    "filename": "1311.sol",
+    "function": "append",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "len >= 32",
+    "loop postcondition": "len <== 32",
+    "loop invariant": "len >= 32"
+  },
+  {
+    "filename": "1311.sol",
+    "function": "parseAddr",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=2 satisfies i<2+2*20",
+    "loop postcondition": "i>=2+2*20",
+    "loop invariant": "0 <= i && i <= 2+2*20"
+  },
+  {
+    "filename": "1311.sol",
+    "function": "strCompare",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < minLength",
+    "loop postcondition": "i >= minLength",
+    "loop invariant": "0 <= i && i <= minLength"
+  },
+  {
+    "filename": "1311.sol",
+    "function": "indexOf",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < h.length && subindex < n.length && (i + subindex",
+    "loop postcondition": "i >= h.length && !(subindex < n.length && (i + subindex)",
+    "loop invariant": "0 <= i && i <= h.length && subindex < n.length && (i + subindex"
+  },
+  {
+    "filename": "1311.sol",
+    "function": "strConcat",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _ba.length && 0 satisfies i < _bb.length",
+    "loop postcondition": "i >= _ba.length && i >= _bb.length",
+    "loop invariant": "0 <= i && i <= _ba.length && 0 <= i && i <= _bb.length"
+  },
+  {
+    "filename": "1311.sol",
+    "function": "parseInt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i<bresult.length",
+    "loop postcondition": "i>=bresult.length",
+    "loop invariant": "0 <= i && i <= bresult.length"
+  },
+  {
+    "filename": "1311.sol",
+    "function": "uint2str",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "j != 0 && i != 0",
+    "loop postcondition": "j == 0 && i == 0",
+    "loop invariant": "j != 0 && i != 0"
+  },
+  {
+    "filename": "1311.sol",
+    "function": "stra2cbor",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < arr.length",
+    "loop postcondition": "i >= arr.length",
+    "loop invariant": "0 <= i && i <= arr.length"
+  },
+  {
+    "filename": "1311.sol",
+    "function": "ba2cbor",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < arr.length",
+    "loop postcondition": "i >= arr.length",
+    "loop invariant": "0 <= i && i <= arr.length"
+  },
+  {
+    "filename": "1311.sol",
+    "function": "matchBytes32Prefix",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i< n_random_bytes",
+    "loop postcondition": "i>= n_random_bytes",
+    "loop invariant": "0 <= i && i <= n_random_bytes"
+  },
+  {
+    "filename": "1311.sol",
+    "function": "copyBytes",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i < (32 + fromOffset + length",
+    "loop postcondition": "!(i < (32 + fromOffset + length)",
+    "loop invariant": "i < (32 + fromOffset + length"
+  },
+  {
+    "filename": "1311.sol",
+    "function": "addAddressToWhiteList",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _addr.length",
+    "loop postcondition": "i >= _addr.length",
+    "loop invariant": "0 <= i && i <= _addr.length"
+  },
+  {
+    "filename": "1311.sol",
+    "function": "subAddressToWhiteList",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _addr.length",
+    "loop postcondition": "i >= _addr.length",
+    "loop invariant": "0 <= i && i <= _addr.length"
+  },
+  {
+    "filename": "1311.sol",
+    "function": "bytesToAddress",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "20 satisfies i > 0",
+    "loop postcondition": "i <= 0",
+    "loop invariant": "0 <= i && i <= 0"
+  },
+  {
+    "filename": "1311.sol",
+    "function": "updatePrice",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "1318.sol",
+    "function": "commitToWeek",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "1318.sol",
+    "function": "payout",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "1 satisfies true",
+    "loop postcondition": "!(true)",
+    "loop invariant": "true"
+  },
+  {
+    "filename": "1318.sol",
+    "function": "postProof",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "1717.sol",
+    "function": "pushTerms",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _array.length",
+    "loop postcondition": "i >= _array.length",
+    "loop invariant": "0 <= i && i <= _array.length"
+  },
+  {
+    "filename": "1717.sol",
+    "function": "calculateCommission",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < commissions.length",
+    "loop postcondition": "i >= commissions.length",
+    "loop invariant": "0 <= i && i <= commissions.length"
+  },
+  {
+    "filename": "19708.sol",
+    "function": "parseAddr",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=2 satisfies i<2+2*20",
+    "loop postcondition": "i>=2+2*20",
+    "loop invariant": "0 <= i && i <= 2+2*20"
+  },
+  {
+    "filename": "19708.sol",
+    "function": "strCompare",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < minLength",
+    "loop postcondition": "i >= minLength",
+    "loop invariant": "0 <= i && i <= minLength"
+  },
+  {
+    "filename": "19708.sol",
+    "function": "indexOf",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < h.length && subindex < n.length && (i + subindex",
+    "loop postcondition": "i >= h.length && !(subindex < n.length && (i + subindex)",
+    "loop invariant": "0 <= i && i <= h.length && subindex < n.length && (i + subindex"
+  },
+  {
+    "filename": "19708.sol",
+    "function": "strConcat",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _ba.length && 0 satisfies i < _bb.length",
+    "loop postcondition": "i >= _ba.length && i >= _bb.length",
+    "loop invariant": "0 <= i && i <= _ba.length && 0 <= i && i <= _bb.length"
+  },
+  {
+    "filename": "19708.sol",
+    "function": "parseInt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i<bresult.length",
+    "loop postcondition": "i>=bresult.length",
+    "loop invariant": "0 <= i && i <= bresult.length"
+  },
+  {
+    "filename": "19708.sol",
+    "function": "uint2str",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "j != 0 && i != 0",
+    "loop postcondition": "j == 0 && i == 0",
+    "loop invariant": "j != 0 && i != 0"
+  },
+  {
+    "filename": "19708.sol",
+    "function": "stra2cbor",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < arrlen && 0 satisfies i < arrlen",
+    "loop postcondition": "i >= arrlen && i >= arrlen",
+    "loop invariant": "0 <= i && i <= arrlen && 0 <= i && i <= arrlen"
+  },
+  {
+    "filename": "19708.sol",
+    "function": "ba2cbor",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < arrlen && 0 satisfies i < arrlen",
+    "loop postcondition": "i >= arrlen && i >= arrlen",
+    "loop invariant": "0 <= i && i <= arrlen && 0 <= i && i <= arrlen"
+  },
+  {
+    "filename": "19708.sol",
+    "function": "matchBytes32Prefix",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i<prefix.length",
+    "loop postcondition": "i>=prefix.length",
+    "loop invariant": "0 <= i && i <= prefix.length"
+  },
+  {
+    "filename": "19708.sol",
+    "function": "copyBytes",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i < (32 + fromOffset + length",
+    "loop postcondition": "!(i < (32 + fromOffset + length)",
+    "loop invariant": "i < (32 + fromOffset + length"
+  },
+  {
+    "filename": "19708.sol",
+    "function": "addToWhiteList",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _addresses.length",
+    "loop postcondition": "i >= _addresses.length",
+    "loop invariant": "0 <= i && i <= _addresses.length"
+  },
+  {
+    "filename": "19708.sol",
+    "function": "removeFromWhiteList",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _addresses.length",
+    "loop postcondition": "i >= _addresses.length",
+    "loop invariant": "0 <= i && i <= _addresses.length"
+  },
+  {
+    "filename": "19708.sol",
+    "function": "findElevenPmUtc",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < 300",
+    "loop postcondition": "i >= 300",
+    "loop invariant": "0 <= i && i <= 300"
+  },
+  {
+    "filename": "20001.sol",
+    "function": "AllotAward",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < ArrayAddress.length && 0 satisfies j < ArrayAddress.length",
+    "loop postcondition": "i >= ArrayAddress.length && j >= ArrayAddress.length",
+    "loop invariant": "0 <= i && i <= ArrayAddress.length && 0 <= j && j <= ArrayAddress.length"
+  },
+  {
+    "filename": "20425.sol",
+    "function": "getValueAt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "max > min",
+    "loop postcondition": "!(max > min)",
+    "loop invariant": "max > min"
+  },
+  {
+    "filename": "20425.sol",
+    "function": "register",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < newUsers.length",
+    "loop postcondition": "i >= newUsers.length",
+    "loop invariant": "0 <= i && i <= newUsers.length"
+  },
+  {
+    "filename": "20425.sol",
+    "function": "deregister",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < bannedUsers.length",
+    "loop postcondition": "i >= bannedUsers.length",
+    "loop invariant": "0 <= i && i <= bannedUsers.length"
+  },
+  {
+    "filename": "20498.sol",
+    "function": "calculateTokensQtyByEther",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "dayOfStart satisfies i >= 0",
+    "loop postcondition": "i <== 0",
+    "loop invariant": "0 <= i && i <= 0"
+  },
+  {
+    "filename": "20498.sol",
+    "function": "closeAllSales",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < sales.length",
+    "loop postcondition": "i >= sales.length",
+    "loop invariant": "0 <= i && i <= sales.length"
+  },
+  {
+    "filename": "20498.sol",
+    "function": "setGlobalMultisigWallet",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < sales.length",
+    "loop postcondition": "i >= sales.length",
+    "loop invariant": "0 <= i && i <= sales.length"
+  },
+  {
+    "filename": "20498.sol",
+    "function": "getTotalCollected",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < sales.length",
+    "loop postcondition": "i >= sales.length",
+    "loop invariant": "0 <= i && i <= sales.length"
+  },
+  {
+    "filename": "20516.sol",
+    "function": "freezingCount",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "release != 0",
+    "loop postcondition": "release == 0",
+    "loop invariant": "release != 0"
+  },
+  {
+    "filename": "20516.sol",
+    "function": "getFreezing",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _index + 1",
+    "loop postcondition": "i >= _index + 1",
+    "loop invariant": "0 <= i && i <= _index + 1"
+  },
+  {
+    "filename": "20516.sol",
+    "function": "releaseAll",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "release != 0 && block.timestamp > release",
+    "loop postcondition": "release == 0 && block.timestamp > release",
+    "loop invariant": "release != 0 && block.timestamp > release"
+  },
+  {
+    "filename": "20516.sol",
+    "function": "freeze",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "20516.sol",
+    "function": "getBonusRate",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < 7",
+    "loop postcondition": "i >= 7",
+    "loop invariant": "0 <= i && i <= 7"
+  },
+  {
+    "filename": "20764.sol",
+    "function": "getBonusPercent",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < totalPhases",
+    "loop postcondition": "i >= totalPhases",
+    "loop invariant": "0 <= i && i <= totalPhases"
+  },
+  {
+    "filename": "20764.sol",
+    "function": "isInPhase",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < totalPhases",
+    "loop postcondition": "i >= totalPhases",
+    "loop invariant": "0 <= i && i <= totalPhases"
+  },
+  {
+    "filename": "20764.sol",
+    "function": "forwardFunds",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < wallets.length - 1",
+    "loop postcondition": "i >= wallets.length - 1",
+    "loop invariant": "0 <= i && i <= wallets.length - 1"
+  },
+  {
+    "filename": "20764.sol",
+    "function": "delWallet",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "index satisfies i < wallets.length-1",
+    "loop postcondition": "i >= wallets.length-1",
+    "loop invariant": "0 <= i && i <= wallets.length-1"
+  },
+  {
+    "filename": "21516.sol",
+    "function": "getFreezingSummaryOf",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "release != 0",
+    "loop postcondition": "release == 0",
+    "loop invariant": "release != 0"
+  },
+  {
+    "filename": "21516.sol",
+    "function": "getFreezing",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _index",
+    "loop postcondition": "i >= _index",
+    "loop invariant": "0 <= i && i <= _index"
+  },
+  {
+    "filename": "21516.sol",
+    "function": "releaseAll",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "release != 0 && block.timestamp > release",
+    "loop postcondition": "release == 0 && block.timestamp > release",
+    "loop invariant": "release != 0 && block.timestamp > release"
+  },
+  {
+    "filename": "21516.sol",
+    "function": "freeze",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "21516.sol",
+    "function": "getBonusRate",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < 1 && 0 satisfies j < 2",
+    "loop postcondition": "i >= 1 && j >= 2",
+    "loop invariant": "0 <= i && i <= 1 && 0 <= j && j <= 2"
+  },
+  {
+    "filename": "21516.sol",
+    "function": "init",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < addresses.length",
+    "loop postcondition": "i >= addresses.length",
+    "loop invariant": "0 <= i && i <= addresses.length"
+  },
+  {
+    "filename": "2188.sol",
+    "function": "sendBatchCS",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _values.length",
+    "loop postcondition": "i >= _values.length",
+    "loop invariant": "0 <= i && i <= _values.length"
+  },
+  {
+    "filename": "21881.sol",
+    "function": "getValueAt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "max > min",
+    "loop postcondition": "!(max > min)",
+    "loop invariant": "max > min"
+  },
+  {
+    "filename": "21918.sol",
+    "function": "bytesToAddress",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "20 satisfies i > 0",
+    "loop postcondition": "i <= 0",
+    "loop invariant": "0 <= i && i <= 0"
+  },
+  {
+    "filename": "21918.sol",
+    "function": "getValueBonus",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < valueBonuses.length",
+    "loop postcondition": "i >= valueBonuses.length",
+    "loop invariant": "0 <= i && i <= valueBonuses.length"
+  },
+  {
+    "filename": "21918.sol",
+    "function": "removeMilestone",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "number satisfies i < milestones.length - 1",
+    "loop postcondition": "i >= milestones.length - 1",
+    "loop invariant": "0 <= i && i <= milestones.length - 1"
+  },
+  {
+    "filename": "21918.sol",
+    "function": "insertMilestone",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "2 satisfies i > numberAfter",
+    "loop postcondition": "i <= numberAfter",
+    "loop invariant": "0 <= i && i <= numberAfter"
+  },
+  {
+    "filename": "21918.sol",
+    "function": "clearMilestones",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < milestones.length",
+    "loop postcondition": "i >= milestones.length",
+    "loop invariant": "0 <= i && i <= milestones.length"
+  },
+  {
+    "filename": "21918.sol",
+    "function": "currentMilestone",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i < milestones.length",
+    "loop postcondition": "i >= milestones.length",
+    "loop invariant": "0 <= i && i <= milestones.length"
+  },
+  {
+    "filename": "21990.sol",
+    "function": "concat",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _ba.length && 0 satisfies i < _bb.length",
+    "loop postcondition": "i >= _ba.length && i >= _bb.length",
+    "loop invariant": "0 <= i && i <= _ba.length && 0 <= i && i <= _bb.length"
+  },
+  {
+    "filename": "21990.sol",
+    "function": "bytes32ToString",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies j < 32 && 0 satisfies j < charCount",
+    "loop postcondition": "j >= 32 && j >= charCount",
+    "loop invariant": "0 <= j && j <= 32 && 0 <= j && j <= charCount"
+  },
+  {
+    "filename": "21990.sol",
+    "function": "uintToBytes",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "v > 0",
+    "loop postcondition": "!(v > 0)",
+    "loop invariant": "v > 0"
+  },
+  {
+    "filename": "21990.sol",
+    "function": "parseTimestamp",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "1 satisfies i <= 12 && 1 satisfies i <= getDaysInMonth(dt.month, dt.year)",
+    "loop postcondition": "i >== 12 && i >== getDaysInMonth(dt.month, dt.year)",
+    "loop invariant": "0 <= i && i <= 12 && 0 <= i && i <= getDaysInMonth(dt.month, dt.year)"
+  },
+  {
+    "filename": "21990.sol",
+    "function": "getYear",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "secondsAccountedFor > timestamp",
+    "loop postcondition": "!(secondsAccountedFor > timestamp)",
+    "loop invariant": "secondsAccountedFor > timestamp"
+  },
+  {
+    "filename": "21990.sol",
+    "function": "Marriage",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "22487.sol",
+    "function": "removeMilestone",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "number satisfies i < milestones.length - 1",
+    "loop postcondition": "i >= milestones.length - 1",
+    "loop invariant": "0 <= i && i <= milestones.length - 1"
+  },
+  {
+    "filename": "22487.sol",
+    "function": "insertMilestone",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "2 satisfies i > numberAfter",
+    "loop postcondition": "i <= numberAfter",
+    "loop invariant": "0 <= i && i <= numberAfter"
+  },
+  {
+    "filename": "22487.sol",
+    "function": "clearMilestones",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < milestones.length",
+    "loop postcondition": "i >= milestones.length",
+    "loop invariant": "0 <= i && i <= milestones.length"
+  },
+  {
+    "filename": "22487.sol",
+    "function": "currentMilestone",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i < milestones.length",
+    "loop postcondition": "i >= milestones.length",
+    "loop invariant": "0 <= i && i <= milestones.length"
+  },
+  {
+    "filename": "22646.sol",
+    "function": "getFreezingSummaryOf",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "release != 0",
+    "loop postcondition": "release == 0",
+    "loop invariant": "release != 0"
+  },
+  {
+    "filename": "22646.sol",
+    "function": "getFreezing",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _index",
+    "loop postcondition": "i >= _index",
+    "loop invariant": "0 <= i && i <= _index"
+  },
+  {
+    "filename": "22646.sol",
+    "function": "releaseAll",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "release != 0 && block.timestamp > release",
+    "loop postcondition": "release == 0 && block.timestamp > release",
+    "loop invariant": "release != 0 && block.timestamp > release"
+  },
+  {
+    "filename": "22646.sol",
+    "function": "freeze",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "22646.sol",
+    "function": "getBonusRate",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < 1 && 0 satisfies j < 2",
+    "loop postcondition": "i >= 1 && j >= 2",
+    "loop invariant": "0 <= i && i <= 1 && 0 <= j && j <= 2"
+  },
+  {
+    "filename": "22646.sol",
+    "function": "init",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < addresses.length",
+    "loop postcondition": "i >= addresses.length",
+    "loop invariant": "0 <= i && i <= addresses.length"
+  },
+  {
+    "filename": "22735.sol",
+    "function": "bytesToAddress",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "20 satisfies i > 0",
+    "loop postcondition": "i <= 0",
+    "loop invariant": "0 <= i && i <= 0"
+  },
+  {
+    "filename": "22735.sol",
+    "function": "airdrop",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "2290.sol",
+    "function": "deploy",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < len",
+    "loop postcondition": "i >= len",
+    "loop invariant": "0 <= i && i <= len"
+  },
+  {
+    "filename": "2301.sol",
+    "function": "getValueAt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "max > min",
+    "loop postcondition": "!(max > min)",
+    "loop invariant": "max > min"
+  },
+  {
+    "filename": "2301.sol",
+    "function": "voteRuling",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _draws.length",
+    "loop postcondition": "i >= _draws.length",
+    "loop invariant": "0 <= i && i <= _draws.length"
+  },
+  {
+    "filename": "2301.sol",
+    "function": "oneShotTokenRepartition",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i <= dispute.appeals && 0 satisfies j < dispute.votes[i].length",
+    "loop postcondition": "i >== dispute.appeals && j >= dispute.votes[i].length",
+    "loop invariant": "0 <= i && i <= dispute.appeals && 0 <= j && j <= dispute.votes[i].length"
+  },
+  {
+    "filename": "2301.sol",
+    "function": "multipleShotTokenRepartition",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "dispute.currentAppealToRepartition satisfies i <= dispute.appeals && dispute.appealsRepartitioned[i].currentIncoherentVote satisfies j < dispute.votes[i].length",
+    "loop postcondition": "i >== dispute.appeals && j >= dispute.votes[i].length",
+    "loop invariant": "0 <= i && i <= dispute.appeals && 0 <= j && j <= dispute.votes[i].length"
+  },
+  {
+    "filename": "2301.sol",
+    "function": "validDraws",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _draws.length",
+    "loop postcondition": "i >= _draws.length",
+    "loop invariant": "0 <= i && i <= _draws.length"
+  },
+  {
+    "filename": "23326.sol",
+    "function": "removeMilestone",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "number satisfies i < milestones.length - 1",
+    "loop postcondition": "i >= milestones.length - 1",
+    "loop invariant": "0 <= i && i <= milestones.length - 1"
+  },
+  {
+    "filename": "23326.sol",
+    "function": "insertMilestone",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "2 satisfies i > numberAfter",
+    "loop postcondition": "i <= numberAfter",
+    "loop invariant": "0 <= i && i <= numberAfter"
+  },
+  {
+    "filename": "23326.sol",
+    "function": "clearMilestones",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < milestones.length",
+    "loop postcondition": "i >= milestones.length",
+    "loop invariant": "0 <= i && i <= milestones.length"
+  },
+  {
+    "filename": "23326.sol",
+    "function": "currentMilestone",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i < milestones.length",
+    "loop postcondition": "i >= milestones.length",
+    "loop invariant": "0 <= i && i <= milestones.length"
+  },
+  {
+    "filename": "23527.sol",
+    "function": "getValueAt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "max > min",
+    "loop postcondition": "!(max > min)",
+    "loop invariant": "max > min"
+  },
+  {
+    "filename": "23533.sol",
+    "function": "getFreezingSummaryOf",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "release != 0",
+    "loop postcondition": "release == 0",
+    "loop invariant": "release != 0"
+  },
+  {
+    "filename": "23533.sol",
+    "function": "getFreezing",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _index",
+    "loop postcondition": "i >= _index",
+    "loop invariant": "0 <= i && i <= _index"
+  },
+  {
+    "filename": "23533.sol",
+    "function": "releaseAll",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "release != 0 && block.timestamp > release",
+    "loop postcondition": "release == 0 && block.timestamp > release",
+    "loop invariant": "release != 0 && block.timestamp > release"
+  },
+  {
+    "filename": "23533.sol",
+    "function": "freeze",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "23533.sol",
+    "function": "getBonusRate",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies j < 2",
+    "loop postcondition": "j >= 2",
+    "loop invariant": "0 <= j && j <= 2"
+  },
+  {
+    "filename": "23533.sol",
+    "function": "init",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < addresses.length",
+    "loop postcondition": "i >= addresses.length",
+    "loop invariant": "0 <= i && i <= addresses.length"
+  },
+  {
+    "filename": "23974.sol",
+    "function": "getValueAt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "max > min",
+    "loop postcondition": "!(max > min)",
+    "loop invariant": "max > min"
+  },
+  {
+    "filename": "2414.sol",
+    "function": "hashToPoint",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "2414.sol",
+    "function": "pubExists",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < self.pubkeys.length",
+    "loop postcondition": "i >= self.pubkeys.length",
+    "loop invariant": "0 <= i && i <= self.pubkeys.length"
+  },
+  {
+    "filename": "2414.sol",
+    "function": "tagExists",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < self.tags.length",
+    "loop postcondition": "i >= self.tags.length",
+    "loop invariant": "0 <= i && i <= self.tags.length"
+  },
+  {
+    "filename": "2414.sol",
+    "function": "isSignatureValid",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < self.pubkeys.length",
+    "loop postcondition": "i >= self.pubkeys.length",
+    "loop invariant": "0 <= i && i <= self.pubkeys.length"
+  },
+  {
+    "filename": "2414.sol",
+    "function": "withdrawLogic",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < ring.pubkeys.length",
+    "loop postcondition": "i >= ring.pubkeys.length",
+    "loop invariant": "0 <= i && i <= ring.pubkeys.length"
+  },
+  {
+    "filename": "2441.sol",
+    "function": "freezingCount",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "release != 0",
+    "loop postcondition": "release == 0",
+    "loop invariant": "release != 0"
+  },
+  {
+    "filename": "2441.sol",
+    "function": "getFreezing",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _index + 1",
+    "loop postcondition": "i >= _index + 1",
+    "loop invariant": "0 <= i && i <= _index + 1"
+  },
+  {
+    "filename": "2441.sol",
+    "function": "releaseAll",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "release != 0 && block.timestamp > release",
+    "loop postcondition": "release == 0 && block.timestamp > release",
+    "loop invariant": "release != 0 && block.timestamp > release"
+  },
+  {
+    "filename": "2441.sol",
+    "function": "freeze",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "2441.sol",
+    "function": "getBonusRate",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies j < 6",
+    "loop postcondition": "j >= 6",
+    "loop invariant": "0 <= j && j <= 6"
+  },
+  {
+    "filename": "2441.sol",
+    "function": "addAddressesToWhitelist",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _addresses.length",
+    "loop postcondition": "i >= _addresses.length",
+    "loop invariant": "0 <= i && i <= _addresses.length"
+  },
+  {
+    "filename": "2441.sol",
+    "function": "removeAddressesFromWhitelist",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _addresses.length",
+    "loop postcondition": "i >= _addresses.length",
+    "loop invariant": "0 <= i && i <= _addresses.length"
+  },
+  {
+    "filename": "2441.sol",
+    "function": "init",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < addresses.length",
+    "loop postcondition": "i >= addresses.length",
+    "loop invariant": "0 <= i && i <= addresses.length"
+  },
+  {
+    "filename": "2498.sol",
+    "function": "deploy",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < len",
+    "loop postcondition": "i >= len",
+    "loop invariant": "0 <= i && i <= len"
+  },
+  {
+    "filename": "2498.sol",
+    "function": "getInstructions",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "2503.sol",
+    "function": "append",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "len >= 32",
+    "loop postcondition": "len <== 32",
+    "loop invariant": "len >= 32"
+  },
+  {
+    "filename": "2503.sol",
+    "function": "parseAddr",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=2 satisfies i<2+2*20",
+    "loop postcondition": "i>=2+2*20",
+    "loop invariant": "0 <= i && i <= 2+2*20"
+  },
+  {
+    "filename": "2503.sol",
+    "function": "strCompare",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < minLength",
+    "loop postcondition": "i >= minLength",
+    "loop invariant": "0 <= i && i <= minLength"
+  },
+  {
+    "filename": "2503.sol",
+    "function": "indexOf",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < h.length && subindex < n.length && (i + subindex",
+    "loop postcondition": "i >= h.length && !(subindex < n.length && (i + subindex)",
+    "loop invariant": "0 <= i && i <= h.length && subindex < n.length && (i + subindex"
+  },
+  {
+    "filename": "2503.sol",
+    "function": "strConcat",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _ba.length && 0 satisfies i < _bb.length",
+    "loop postcondition": "i >= _ba.length && i >= _bb.length",
+    "loop invariant": "0 <= i && i <= _ba.length && 0 <= i && i <= _bb.length"
+  },
+  {
+    "filename": "2503.sol",
+    "function": "parseInt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i<bresult.length",
+    "loop postcondition": "i>=bresult.length",
+    "loop invariant": "0 <= i && i <= bresult.length"
+  },
+  {
+    "filename": "2503.sol",
+    "function": "uint2str",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "j != 0 && i != 0",
+    "loop postcondition": "j == 0 && i == 0",
+    "loop invariant": "j != 0 && i != 0"
+  },
+  {
+    "filename": "2503.sol",
+    "function": "stra2cbor",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < arr.length",
+    "loop postcondition": "i >= arr.length",
+    "loop invariant": "0 <= i && i <= arr.length"
+  },
+  {
+    "filename": "2503.sol",
+    "function": "ba2cbor",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < arr.length",
+    "loop postcondition": "i >= arr.length",
+    "loop invariant": "0 <= i && i <= arr.length"
+  },
+  {
+    "filename": "2503.sol",
+    "function": "matchBytes32Prefix",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i< n_random_bytes",
+    "loop postcondition": "i>= n_random_bytes",
+    "loop invariant": "0 <= i && i <= n_random_bytes"
+  },
+  {
+    "filename": "2503.sol",
+    "function": "copyBytes",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i < (32 + fromOffset + length",
+    "loop postcondition": "!(i < (32 + fromOffset + length)",
+    "loop invariant": "i < (32 + fromOffset + length"
+  },
+  {
+    "filename": "2503.sol",
+    "function": "buyTokens",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "2552.sol",
+    "function": "iterate_next",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "keyIndex < self.keys.length && self.keys[keyIndex].deleted",
+    "loop postcondition": "!(keyIndex < self.keys.length && self.keys[keyIndex].deleted)",
+    "loop invariant": "keyIndex < self.keys.length && self.keys[keyIndex].deleted"
+  },
+  {
+    "filename": "2552.sol",
+    "function": "miningEveryDay",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "day > 0 && max_while > 0 && mineTotalBalance > 0",
+    "loop postcondition": "!(day > 0 && max_while > 0 && mineTotalBalance > 0)",
+    "loop invariant": "day > 0 && max_while > 0 && mineTotalBalance > 0"
+  },
+  {
+    "filename": "2552.sol",
+    "function": "changeAutherOwner",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "25749.sol",
+    "function": "parseAddr",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=2 satisfies i<2+2*20",
+    "loop postcondition": "i>=2+2*20",
+    "loop invariant": "0 <= i && i <= 2+2*20"
+  },
+  {
+    "filename": "25749.sol",
+    "function": "strCompare",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < minLength",
+    "loop postcondition": "i >= minLength",
+    "loop invariant": "0 <= i && i <= minLength"
+  },
+  {
+    "filename": "25749.sol",
+    "function": "indexOf",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < h.length && subindex < n.length && (i + subindex",
+    "loop postcondition": "i >= h.length && !(subindex < n.length && (i + subindex)",
+    "loop invariant": "0 <= i && i <= h.length && subindex < n.length && (i + subindex"
+  },
+  {
+    "filename": "25749.sol",
+    "function": "strConcat",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _ba.length && 0 satisfies i < _bb.length",
+    "loop postcondition": "i >= _ba.length && i >= _bb.length",
+    "loop invariant": "0 <= i && i <= _ba.length && 0 <= i && i <= _bb.length"
+  },
+  {
+    "filename": "25749.sol",
+    "function": "parseInt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i<bresult.length",
+    "loop postcondition": "i>=bresult.length",
+    "loop invariant": "0 <= i && i <= bresult.length"
+  },
+  {
+    "filename": "25749.sol",
+    "function": "uint2str",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "j != 0 && i != 0",
+    "loop postcondition": "j == 0 && i == 0",
+    "loop invariant": "j != 0 && i != 0"
+  },
+  {
+    "filename": "25749.sol",
+    "function": "stra2cbor",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < arrlen && 0 satisfies i < arrlen",
+    "loop postcondition": "i >= arrlen && i >= arrlen",
+    "loop invariant": "0 <= i && i <= arrlen && 0 <= i && i <= arrlen"
+  },
+  {
+    "filename": "25749.sol",
+    "function": "ba2cbor",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < arrlen && 0 satisfies i < arrlen",
+    "loop postcondition": "i >= arrlen && i >= arrlen",
+    "loop invariant": "0 <= i && i <= arrlen && 0 <= i && i <= arrlen"
+  },
+  {
+    "filename": "25749.sol",
+    "function": "matchBytes32Prefix",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i< n_random_bytes",
+    "loop postcondition": "i>= n_random_bytes",
+    "loop invariant": "0 <= i && i <= n_random_bytes"
+  },
+  {
+    "filename": "25749.sol",
+    "function": "copyBytes",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i < (32 + fromOffset + length",
+    "loop postcondition": "!(i < (32 + fromOffset + length)",
+    "loop invariant": "i < (32 + fromOffset + length"
+  },
+  {
+    "filename": "25749.sol",
+    "function": "CheckSoftCap",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "currentSoftCapContact satisfies i < 4",
+    "loop postcondition": "i >= 4",
+    "loop invariant": "0 <= i && i <= 4"
+  },
+  {
+    "filename": "25941.sol",
+    "function": "calculateTokenAmount",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < bonusIntervals.length",
+    "loop postcondition": "i >= bonusIntervals.length",
+    "loop invariant": "0 <= i && i <= bonusIntervals.length"
+  },
+  {
+    "filename": "25941.sol",
+    "function": "getIntervals",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i<bonusIntervals.length",
+    "loop postcondition": "i>=bonusIntervals.length",
+    "loop invariant": "0 <= i && i <= bonusIntervals.length"
+  },
+  {
+    "filename": "25941.sol",
+    "function": "changeRegistrationStatuses",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < targets.length",
+    "loop postcondition": "i >= targets.length",
+    "loop invariant": "0 <= i && i <= targets.length"
+  },
+  {
+    "filename": "26195.sol",
+    "function": "getValueAt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "max > min",
+    "loop postcondition": "!(max > min)",
+    "loop invariant": "max > min"
+  },
+  {
+    "filename": "26195.sol",
+    "function": "register",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < newUsers.length",
+    "loop postcondition": "i >= newUsers.length",
+    "loop invariant": "0 <= i && i <= newUsers.length"
+  },
+  {
+    "filename": "26195.sol",
+    "function": "deregister",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < bannedUsers.length",
+    "loop postcondition": "i >= bannedUsers.length",
+    "loop invariant": "0 <= i && i <= bannedUsers.length"
+  },
+  {
+    "filename": "26277.sol",
+    "function": "bytesToAddress",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "20 satisfies i > 0",
+    "loop postcondition": "i <= 0",
+    "loop invariant": "0 <= i && i <= 0"
+  },
+  {
+    "filename": "26277.sol",
+    "function": "removeMilestone",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "number satisfies i < milestones.length - 1",
+    "loop postcondition": "i >= milestones.length - 1",
+    "loop invariant": "0 <= i && i <= milestones.length - 1"
+  },
+  {
+    "filename": "26277.sol",
+    "function": "insertMilestone",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "2 satisfies i > numberAfter",
+    "loop postcondition": "i <= numberAfter",
+    "loop invariant": "0 <= i && i <= numberAfter"
+  },
+  {
+    "filename": "26277.sol",
+    "function": "clearMilestones",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < milestones.length",
+    "loop postcondition": "i >= milestones.length",
+    "loop invariant": "0 <= i && i <= milestones.length"
+  },
+  {
+    "filename": "26277.sol",
+    "function": "currentMilestone",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i < milestones.length",
+    "loop postcondition": "i >= milestones.length",
+    "loop invariant": "0 <= i && i <= milestones.length"
+  },
+  {
+    "filename": "26296.sol",
+    "function": "getValueAt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "max > min",
+    "loop postcondition": "!(max > min)",
+    "loop invariant": "max > min"
+  },
+  {
+    "filename": "26296.sol",
+    "function": "resolveFund",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < funding.funders.length",
+    "loop postcondition": "i >= funding.funders.length",
+    "loop invariant": "0 <= i && i <= funding.funders.length"
+  },
+  {
+    "filename": "26296.sol",
+    "function": "memcpy",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "len >= 32",
+    "loop postcondition": "len <== 32",
+    "loop invariant": "len >= 32"
+  },
+  {
+    "filename": "26296.sol",
+    "function": "len",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies ptr < end",
+    "loop postcondition": "ptr >= end",
+    "loop invariant": "0 <= l && l <= end"
+  },
+  {
+    "filename": "26296.sol",
+    "function": "compare",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies idx < shortest",
+    "loop postcondition": "idx >= shortest",
+    "loop invariant": "0 <= idx && idx <= shortest"
+  },
+  {
+    "filename": "26296.sol",
+    "function": "ord",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "1 satisfies i < length",
+    "loop postcondition": "i >= length",
+    "loop invariant": "0 <= i && i <= length"
+  },
+  {
+    "filename": "26296.sol",
+    "function": "findPtr",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies idx <= selflen - needlelen",
+    "loop postcondition": "idx >== selflen - needlelen",
+    "loop invariant": "0 <= idx && idx <= selflen - needlelen"
+  },
+  {
+    "filename": "26296.sol",
+    "function": "rfindPtr",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "ptr >= selfptr",
+    "loop postcondition": "!(ptr >= selfptr)",
+    "loop invariant": "ptr >= selfptr"
+  },
+  {
+    "filename": "26296.sol",
+    "function": "count",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "ptr <= self._ptr + self._len",
+    "loop postcondition": "!(ptr <= self._ptr + self._len)",
+    "loop invariant": "ptr <= self._ptr + self._len"
+  },
+  {
+    "filename": "26296.sol",
+    "function": "strConcat",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _ba.length && 0 satisfies i < _bb.length",
+    "loop postcondition": "i >= _ba.length && i >= _bb.length",
+    "loop invariant": "0 <= i && i <= _ba.length && 0 <= i && i <= _bb.length"
+  },
+  {
+    "filename": "26296.sol",
+    "function": "join",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < parts.length && 0 satisfies i < parts.length",
+    "loop postcondition": "i >= parts.length && i >= parts.length",
+    "loop invariant": "0 <= i && i <= parts.length && 0 <= i && i <= parts.length"
+  },
+  {
+    "filename": "26296.sol",
+    "function": "addressToString",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < 20",
+    "loop postcondition": "i >= 20",
+    "loop invariant": "0 <= i && i <= 20"
+  },
+  {
+    "filename": "26296.sol",
+    "function": "bytes32ToString",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies j < 32 && 0 satisfies j < charCount",
+    "loop postcondition": "j >= 32 && j >= charCount",
+    "loop invariant": "0 <= j && j <= 32 && 0 <= j && j <= charCount"
+  },
+  {
+    "filename": "26603.sol",
+    "function": "parseAddr",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=2 satisfies i<2+2*20",
+    "loop postcondition": "i>=2+2*20",
+    "loop invariant": "0 <= i && i <= 2+2*20"
+  },
+  {
+    "filename": "26603.sol",
+    "function": "strCompare",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < minLength",
+    "loop postcondition": "i >= minLength",
+    "loop invariant": "0 <= i && i <= minLength"
+  },
+  {
+    "filename": "26603.sol",
+    "function": "indexOf",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < h.length && subindex < n.length && (i + subindex",
+    "loop postcondition": "i >= h.length && !(subindex < n.length && (i + subindex)",
+    "loop invariant": "0 <= i && i <= h.length && subindex < n.length && (i + subindex"
+  },
+  {
+    "filename": "26603.sol",
+    "function": "strConcat",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _ba.length && 0 satisfies i < _bb.length",
+    "loop postcondition": "i >= _ba.length && i >= _bb.length",
+    "loop invariant": "0 <= i && i <= _ba.length && 0 <= i && i <= _bb.length"
+  },
+  {
+    "filename": "26603.sol",
+    "function": "parseInt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i<bresult.length",
+    "loop postcondition": "i>=bresult.length",
+    "loop invariant": "0 <= i && i <= bresult.length"
+  },
+  {
+    "filename": "26603.sol",
+    "function": "uint2str",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "j != 0 && i != 0",
+    "loop postcondition": "j == 0 && i == 0",
+    "loop invariant": "j != 0 && i != 0"
+  },
+  {
+    "filename": "26603.sol",
+    "function": "stra2cbor",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < arrlen && 0 satisfies i < arrlen",
+    "loop postcondition": "i >= arrlen && i >= arrlen",
+    "loop invariant": "0 <= i && i <= arrlen && 0 <= i && i <= arrlen"
+  },
+  {
+    "filename": "26603.sol",
+    "function": "ba2cbor",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < arrlen && 0 satisfies i < arrlen",
+    "loop postcondition": "i >= arrlen && i >= arrlen",
+    "loop invariant": "0 <= i && i <= arrlen && 0 <= i && i <= arrlen"
+  },
+  {
+    "filename": "26603.sol",
+    "function": "matchBytes32Prefix",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i< n_random_bytes",
+    "loop postcondition": "i>= n_random_bytes",
+    "loop invariant": "0 <= i && i <= n_random_bytes"
+  },
+  {
+    "filename": "26603.sol",
+    "function": "copyBytes",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i < (32 + fromOffset + length",
+    "loop postcondition": "!(i < (32 + fromOffset + length)",
+    "loop invariant": "i < (32 + fromOffset + length"
+  },
+  {
+    "filename": "26774.sol",
+    "function": "getValueAt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "max > min",
+    "loop postcondition": "!(max > min)",
+    "loop invariant": "max > min"
+  },
+  {
+    "filename": "2711.sol",
+    "function": "iterate_next",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "keyIndex < self.keys.length && self.keys[keyIndex].deleted",
+    "loop postcondition": "!(keyIndex < self.keys.length && self.keys[keyIndex].deleted)",
+    "loop invariant": "keyIndex < self.keys.length && self.keys[keyIndex].deleted"
+  },
+  {
+    "filename": "2711.sol",
+    "function": "miningEveryDay",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "day > 0 && max_while > 0 && mineTotalBalance > 0",
+    "loop postcondition": "!(day > 0 && max_while > 0 && mineTotalBalance > 0)",
+    "loop invariant": "day > 0 && max_while > 0 && mineTotalBalance > 0"
+  },
+  {
+    "filename": "2711.sol",
+    "function": "changeAutherOwner",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "27237.sol",
+    "function": "recalculate",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "balances[user].lastDividensPayoutNumber satisfies i < amountOfDividendsPayouts && balances[user].lastRedemptionPayoutNumber satisfies j < amountOfRedemptionPayouts",
+    "loop postcondition": "i >= amountOfDividendsPayouts && j >= amountOfRedemptionPayouts",
+    "loop invariant": "0 <= i && i <= amountOfDividendsPayouts && 0 <= j && j <= amountOfRedemptionPayouts"
+  },
+  {
+    "filename": "27610.sol",
+    "function": "getValueBonus",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < valueBonuses.length",
+    "loop postcondition": "i >= valueBonuses.length",
+    "loop invariant": "0 <= i && i <= valueBonuses.length"
+  },
+  {
+    "filename": "27610.sol",
+    "function": "removeMilestone",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "number satisfies i < milestones.length - 1",
+    "loop postcondition": "i >= milestones.length - 1",
+    "loop invariant": "0 <= i && i <= milestones.length - 1"
+  },
+  {
+    "filename": "27610.sol",
+    "function": "insertMilestone",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "2 satisfies i > numberAfter",
+    "loop postcondition": "i <= numberAfter",
+    "loop invariant": "0 <= i && i <= numberAfter"
+  },
+  {
+    "filename": "27610.sol",
+    "function": "clearMilestones",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < milestones.length",
+    "loop postcondition": "i >= milestones.length",
+    "loop invariant": "0 <= i && i <= milestones.length"
+  },
+  {
+    "filename": "27610.sol",
+    "function": "currentMilestone",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < milestones.length",
+    "loop postcondition": "i >= milestones.length",
+    "loop invariant": "0 <= i && i <= milestones.length"
+  },
+  {
+    "filename": "27938.sol",
+    "function": "getSig",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < l",
+    "loop postcondition": "i >= l",
+    "loop invariant": "0 <= i && i <= l"
+  },
+  {
+    "filename": "27938.sol",
+    "function": "distribute_token",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < investors_num",
+    "loop postcondition": "i >= investors_num",
+    "loop invariant": "0 <= i && i <= investors_num"
+  },
+  {
+    "filename": "27938.sol",
+    "function": "ban_account",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < investors_num",
+    "loop postcondition": "i >= investors_num",
+    "loop invariant": "0 <= i && i <= investors_num"
+  },
+  {
+    "filename": "28260.sol",
+    "function": "stringToUint",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < b.length",
+    "loop postcondition": "i >= b.length",
+    "loop invariant": "0 <= i && i <= b.length"
+  },
+  {
+    "filename": "28311.sol",
+    "function": "getValueAt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "max > min",
+    "loop postcondition": "!(max > min)",
+    "loop invariant": "max > min"
+  },
+  {
+    "filename": "28311.sol",
+    "function": "generateTokensByList",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _owners.length",
+    "loop postcondition": "i >= _owners.length",
+    "loop invariant": "0 <= i && i <= _owners.length"
+  },
+  {
+    "filename": "28341.sol",
+    "function": "getValueAt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "max > min",
+    "loop postcondition": "!(max > min)",
+    "loop invariant": "max > min"
+  },
+  {
+    "filename": "28456.sol",
+    "function": "setWeeklyRate",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < 40",
+    "loop postcondition": "i >= 40",
+    "loop invariant": "0 <= i && i <= 40"
+  },
+  {
+    "filename": "28612.sol",
+    "function": "getValueAt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "max > min",
+    "loop postcondition": "!(max > min)",
+    "loop invariant": "max > min"
+  },
+  {
+    "filename": "28733.sol",
+    "function": "getValueAt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "max > min",
+    "loop postcondition": "!(max > min)",
+    "loop invariant": "max > min"
+  },
+  {
+    "filename": "28733.sol",
+    "function": "WhiteList",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i<addrs.length",
+    "loop postcondition": "i>=addrs.length",
+    "loop invariant": "0 <= i && i <= addrs.length"
+  },
+  {
+    "filename": "28733.sol",
+    "function": "addAddress",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i<addrs.length",
+    "loop postcondition": "i>=addrs.length",
+    "loop invariant": "0 <= i && i <= addrs.length"
+  },
+  {
+    "filename": "28733.sol",
+    "function": "removeAddress",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i<contracts.length - 1 && j=0 satisfies j<investors.length - 1",
+    "loop postcondition": "i>=contracts.length - 1 && j>=investors.length - 1",
+    "loop invariant": "0 <= i && i <= contracts.length - 1 && 0 <= j && j <= investors.length - 1"
+  },
+  {
+    "filename": "28733.sol",
+    "function": "MultiSigWallet",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i<_owners.length",
+    "loop postcondition": "i>=_owners.length",
+    "loop invariant": "0 <= i && i <= _owners.length"
+  },
+  {
+    "filename": "28733.sol",
+    "function": "removeOwner",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i<owners.length - 1",
+    "loop postcondition": "i>=owners.length - 1",
+    "loop invariant": "0 <= i && i <= owners.length - 1"
+  },
+  {
+    "filename": "28733.sol",
+    "function": "replaceOwner",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i<owners.length",
+    "loop postcondition": "i>=owners.length",
+    "loop invariant": "0 <= i && i <= owners.length"
+  },
+  {
+    "filename": "28733.sol",
+    "function": "isConfirmed",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i<owners.length",
+    "loop postcondition": "i>=owners.length",
+    "loop invariant": "0 <= i && i <= owners.length"
+  },
+  {
+    "filename": "28733.sol",
+    "function": "getConfirmationCount",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i<owners.length",
+    "loop postcondition": "i>=owners.length",
+    "loop invariant": "0 <= i && i <= owners.length"
+  },
+  {
+    "filename": "28733.sol",
+    "function": "getTransactionCount",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i<transactionCount",
+    "loop postcondition": "i>=transactionCount",
+    "loop invariant": "0 <= i && i <= transactionCount"
+  },
+  {
+    "filename": "28733.sol",
+    "function": "getConfirmations",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i<owners.length && i=0 satisfies i<count",
+    "loop postcondition": "i>=owners.length && i>=count",
+    "loop invariant": "0 <= i && i <= owners.length && 0 <= i && i <= count"
+  },
+  {
+    "filename": "28733.sol",
+    "function": "getTransactionIds",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i<transactionCount && i=from satisfies i<to",
+    "loop postcondition": "i>=transactionCount && i>=to",
+    "loop invariant": "0 <= i && i <= transactionCount && 0 <= i && i <= to"
+  },
+  {
+    "filename": "28802.sol",
+    "function": "buyTokens",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "currentStage < stages.length && stages[currentStage].till < nowTime",
+    "loop postcondition": "!(currentStage < stages.length && stages[currentStage].till < nowTime)",
+    "loop invariant": "currentStage < stages.length && stages[currentStage].till < nowTime"
+  },
+  {
+    "filename": "28802.sol",
+    "function": "appendContribution",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "28802.sol",
+    "function": "mintTokens",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _receivers.length",
+    "loop postcondition": "i >= _receivers.length",
+    "loop invariant": "0 <= i && i <= _receivers.length"
+  },
+  {
+    "filename": "29285.sol",
+    "function": "generateTokensForPresaleAccounts",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < accounts.length",
+    "loop postcondition": "i >= accounts.length",
+    "loop invariant": "0 <= i && i <= accounts.length"
+  },
+  {
+    "filename": "3284.sol",
+    "function": "getValueAt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "max > min",
+    "loop postcondition": "!(max > min)",
+    "loop invariant": "max > min"
+  },
+  {
+    "filename": "3284.sol",
+    "function": "addAddressesToWhitelist",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < addrs.length",
+    "loop postcondition": "i >= addrs.length",
+    "loop invariant": "0 <= i && i <= addrs.length"
+  },
+  {
+    "filename": "3284.sol",
+    "function": "removeAddressesFromWhitelist",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < addrs.length",
+    "loop postcondition": "i >= addrs.length",
+    "loop invariant": "0 <= i && i <= addrs.length"
+  },
+  {
+    "filename": "3284.sol",
+    "function": "initTiers",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i < totalTiers",
+    "loop postcondition": "i >= totalTiers",
+    "loop invariant": "0 <= i && i <= totalTiers"
+  },
+  {
+    "filename": "3284.sol",
+    "function": "setCapForParticipants",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i < participants.length",
+    "loop postcondition": "i >= participants.length",
+    "loop invariant": "0 <= i && i <= participants.length"
+  },
+  {
+    "filename": "3284.sol",
+    "function": "getTier",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < totalTiers",
+    "loop postcondition": "i >= totalTiers",
+    "loop invariant": "0 <= i && i <= totalTiers"
+  },
+  {
+    "filename": "39267.sol",
+    "function": "distributeReward",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < numBidders",
+    "loop postcondition": "i >= numBidders",
+    "loop invariant": "0 <= i && i <= numBidders"
+  },
+  {
+    "filename": "39267.sol",
+    "function": "containsSender",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < numBidders",
+    "loop postcondition": "i >= numBidders",
+    "loop invariant": "0 <= i && i <= numBidders"
+  },
+  {
+    "filename": "39321.sol",
+    "function": "getValueAt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "max > min",
+    "loop postcondition": "!(max > min)",
+    "loop invariant": "max > min"
+  },
+  {
+    "filename": "39321.sol",
+    "function": "lastTokenIsTransferableDate",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < grantIndex",
+    "loop postcondition": "i >= grantIndex",
+    "loop invariant": "0 <= i && i <= grantIndex"
+  },
+  {
+    "filename": "39321.sol",
+    "function": "transferableTokens",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < grantIndex",
+    "loop postcondition": "i >= grantIndex",
+    "loop invariant": "0 <= i && i <= grantIndex"
+  },
+  {
+    "filename": "39367.sol",
+    "function": "getPrice",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < deadlines.length",
+    "loop postcondition": "i >= deadlines.length",
+    "loop invariant": "0 <= i && i <= deadlines.length"
+  },
+  {
+    "filename": "39471.sol",
+    "function": "get_CountProfitsToken",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i<countHolders && j=0 satisfies j<countTempHolders",
+    "loop postcondition": "i>=countHolders && j>=countTempHolders",
+    "loop invariant": "0 <= i && i <= countHolders && 0 <= j && j <= countTempHolders"
+  },
+  {
+    "filename": "39471.sol",
+    "function": "get_CountAllHolderForProfit",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i<countHolders && j=0 satisfies j<countTempHolders",
+    "loop postcondition": "i>=countHolders && j>=countTempHolders",
+    "loop invariant": "0 <= i && i <= countHolders && 0 <= j && j <= countTempHolders"
+  },
+  {
+    "filename": "39471.sol",
+    "function": "get_Holders",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "position < countHolders && j=position-countHolders satisfies j<countTempHolders",
+    "loop postcondition": "position >= countHolders && j>=countTempHolders",
+    "loop invariant": "position < countHolders && 0 <= j && j <= countTempHolders"
+  },
+  {
+    "filename": "39494.sol",
+    "function": "getValueAt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "max > min",
+    "loop postcondition": "!(max > min)",
+    "loop invariant": "max > min"
+  },
+  {
+    "filename": "39494.sol",
+    "function": "fill",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i< data.length",
+    "loop postcondition": "i>= data.length",
+    "loop invariant": "0 <= i && i <= data.length"
+  },
+  {
+    "filename": "39664.sol",
+    "function": "insertInPlace",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "1 satisfies i > insertingIndex && self.length > 0 && insertingIndex < self.length && self[insertingIndex] < n",
+    "loop postcondition": "i <= insertingIndex && !(self.length > 0 && insertingIndex < self.length && self[insertingIndex] < n)",
+    "loop invariant": "0 <= i && i <= insertingIndex && self.length > 0 && insertingIndex < self.length && self[insertingIndex] < n"
+  },
+  {
+    "filename": "39664.sol",
+    "function": "getCard",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < cardIndex",
+    "loop postcondition": "i >= cardIndex",
+    "loop invariant": "0 <= i && i <= cardIndex"
+  },
+  {
+    "filename": "39664.sol",
+    "function": "countHand",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < hand.length && 0 satisfies j < l",
+    "loop postcondition": "i >= hand.length && j >= l",
+    "loop invariant": "0 <= i && i <= hand.length && 0 <= j && j <= l"
+  },
+  {
+    "filename": "39664.sol",
+    "function": "bestSum",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < possibleSums.length",
+    "loop postcondition": "i >= possibleSums.length",
+    "loop invariant": "0 <= i && i <= possibleSums.length"
+  },
+  {
+    "filename": "39664.sol",
+    "function": "appendArray",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < array.length",
+    "loop postcondition": "i >= array.length",
+    "loop invariant": "0 <= i && i <= array.length"
+  },
+  {
+    "filename": "39730.sol",
+    "function": "getPrice",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < deadlines.length",
+    "loop postcondition": "i >= deadlines.length",
+    "loop invariant": "0 <= i && i <= deadlines.length"
+  },
+  {
+    "filename": "39862.sol",
+    "function": "getValueAt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "max > min",
+    "loop postcondition": "!(max > min)",
+    "loop invariant": "max > min"
+  },
+  {
+    "filename": "413.sol",
+    "function": "parseAddr",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=2 satisfies i<2+2*20",
+    "loop postcondition": "i>=2+2*20",
+    "loop invariant": "0 <= i && i <= 2+2*20"
+  },
+  {
+    "filename": "413.sol",
+    "function": "strCompare",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < minLength",
+    "loop postcondition": "i >= minLength",
+    "loop invariant": "0 <= i && i <= minLength"
+  },
+  {
+    "filename": "413.sol",
+    "function": "indexOf",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < h.length && subindex < n.length && (i + subindex",
+    "loop postcondition": "i >= h.length && !(subindex < n.length && (i + subindex)",
+    "loop invariant": "0 <= i && i <= h.length && subindex < n.length && (i + subindex"
+  },
+  {
+    "filename": "413.sol",
+    "function": "strConcat",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _ba.length && 0 satisfies i < _bb.length",
+    "loop postcondition": "i >= _ba.length && i >= _bb.length",
+    "loop invariant": "0 <= i && i <= _ba.length && 0 <= i && i <= _bb.length"
+  },
+  {
+    "filename": "413.sol",
+    "function": "parseInt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i<bresult.length",
+    "loop postcondition": "i>=bresult.length",
+    "loop invariant": "0 <= i && i <= bresult.length"
+  },
+  {
+    "filename": "413.sol",
+    "function": "uint2str",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "j != 0 && i != 0",
+    "loop postcondition": "j == 0 && i == 0",
+    "loop invariant": "j != 0 && i != 0"
+  },
+  {
+    "filename": "413.sol",
+    "function": "stra2cbor",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < arrlen && 0 satisfies i < arrlen",
+    "loop postcondition": "i >= arrlen && i >= arrlen",
+    "loop invariant": "0 <= i && i <= arrlen && 0 <= i && i <= arrlen"
+  },
+  {
+    "filename": "413.sol",
+    "function": "ba2cbor",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < arrlen && 0 satisfies i < arrlen",
+    "loop postcondition": "i >= arrlen && i >= arrlen",
+    "loop invariant": "0 <= i && i <= arrlen && 0 <= i && i <= arrlen"
+  },
+  {
+    "filename": "413.sol",
+    "function": "matchBytes32Prefix",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i< n_random_bytes",
+    "loop postcondition": "i>= n_random_bytes",
+    "loop invariant": "0 <= i && i <= n_random_bytes"
+  },
+  {
+    "filename": "413.sol",
+    "function": "copyBytes",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i < (32 + fromOffset + length",
+    "loop postcondition": "!(i < (32 + fromOffset + length)",
+    "loop invariant": "i < (32 + fromOffset + length"
+  },
+  {
+    "filename": "413.sol",
+    "function": "__callback",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "resultBytes.length-1 satisfies i+1 > 15",
+    "loop postcondition": "i+1 <= 15",
+    "loop invariant": "0 <= i && i <= 15"
+  },
+  {
+    "filename": "415.sol",
+    "function": "settle",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i <= (appeals > maxAppeals ? maxAppeals : appeals) && 0 satisfies c <= choices",
+    "loop postcondition": "i >== (appeals > maxAppeals ? maxAppeals : appeals) && c >== choices",
+    "loop invariant": "0 <= i && i <= (appeals > maxAppeals ? maxAppeals : appeals) && 0 <= c && c <= choices"
+  },
+  {
+    "filename": "415.sol",
+    "function": "getValueAt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "max > min",
+    "loop postcondition": "!(max > min)",
+    "loop invariant": "max > min"
+  },
+  {
+    "filename": "415.sol",
+    "function": "voteRuling",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _draws.length",
+    "loop postcondition": "i >= _draws.length",
+    "loop invariant": "0 <= i && i <= _draws.length"
+  },
+  {
+    "filename": "415.sol",
+    "function": "oneShotTokenRepartition",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i <= dispute.appeals && 0 satisfies j < dispute.votes[i].length",
+    "loop postcondition": "i >== dispute.appeals && j >= dispute.votes[i].length",
+    "loop invariant": "0 <= i && i <= dispute.appeals && 0 <= j && j <= dispute.votes[i].length"
+  },
+  {
+    "filename": "415.sol",
+    "function": "multipleShotTokenRepartition",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "dispute.currentAppealToRepartition satisfies i <= dispute.appeals && dispute.appealsRepartitioned[i].currentIncoherentVote satisfies j < dispute.votes[i].length",
+    "loop postcondition": "i >== dispute.appeals && j >= dispute.votes[i].length",
+    "loop invariant": "0 <= i && i <= dispute.appeals && 0 <= j && j <= dispute.votes[i].length"
+  },
+  {
+    "filename": "415.sol",
+    "function": "validDraws",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _draws.length",
+    "loop postcondition": "i >= _draws.length",
+    "loop invariant": "0 <= i && i <= _draws.length"
+  },
+  {
+    "filename": "42.sol",
+    "function": "withdraw",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "42.sol",
+    "function": "calcDifficulty",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "42.sol",
+    "function": "expBySquaring",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "true",
+    "loop postcondition": "loop exits via break/return",
+    "loop invariant": "true"
+  },
+  {
+    "filename": "42.sol",
+    "function": "ln",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "4474.sol",
+    "function": "freezingCount",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "release != 0",
+    "loop postcondition": "release == 0",
+    "loop invariant": "release != 0"
+  },
+  {
+    "filename": "4474.sol",
+    "function": "getFreezing",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _index + 1",
+    "loop postcondition": "i >= _index + 1",
+    "loop invariant": "0 <= i && i <= _index + 1"
+  },
+  {
+    "filename": "4474.sol",
+    "function": "releaseAll",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "release != 0 && block.timestamp > release",
+    "loop postcondition": "release == 0 && block.timestamp > release",
+    "loop invariant": "release != 0 && block.timestamp > release"
+  },
+  {
+    "filename": "4474.sol",
+    "function": "freeze",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "4474.sol",
+    "function": "getBonusRate",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < 1",
+    "loop postcondition": "i >= 1",
+    "loop invariant": "0 <= i && i <= 1"
+  },
+  {
+    "filename": "4474.sol",
+    "function": "addAddressesToWhitelist",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _addresses.length",
+    "loop postcondition": "i >= _addresses.length",
+    "loop invariant": "0 <= i && i <= _addresses.length"
+  },
+  {
+    "filename": "4474.sol",
+    "function": "removeAddressesFromWhitelist",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _addresses.length",
+    "loop postcondition": "i >= _addresses.length",
+    "loop invariant": "0 <= i && i <= _addresses.length"
+  },
+  {
+    "filename": "4756.sol",
+    "function": "addProtos",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < externalIDs.length",
+    "loop postcondition": "i >= externalIDs.length",
+    "loop invariant": "0 <= i && i <= externalIDs.length"
+  },
+  {
+    "filename": "4756.sol",
+    "function": "getRandomCard",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < mythic.length",
+    "loop postcondition": "i >= mythic.length",
+    "loop invariant": "0 <= i && i <= mythic.length"
+  },
+  {
+    "filename": "4756.sol",
+    "function": "isApproved",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < approved.length",
+    "loop postcondition": "i >= approved.length",
+    "loop invariant": "0 <= i && i <= approved.length"
+  },
+  {
+    "filename": "4756.sol",
+    "function": "claim",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "current satisfies i < end && 0 satisfies j < size",
+    "loop postcondition": "i >= end && j >= size",
+    "loop invariant": "0 <= i && i <= end && 0 <= j && j <= size"
+  },
+  {
+    "filename": "4756.sol",
+    "function": "predictPacks",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < count && 0 satisfies j < size",
+    "loop postcondition": "i >= count && j >= size",
+    "loop invariant": "0 <= i && i <= count && 0 <= j && j <= size"
+  },
+  {
+    "filename": "4756.sol",
+    "function": "isPriorPack",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < packs.length",
+    "loop postcondition": "i >= packs.length",
+    "loop invariant": "0 <= i && i <= packs.length"
+  },
+  {
+    "filename": "4756.sol",
+    "function": "claimMultiple",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < cardDifference",
+    "loop postcondition": "i >= cardDifference",
+    "loop invariant": "0 <= i && i <= cardDifference"
+  },
+  {
+    "filename": "491.sol",
+    "function": "adminClaimAirdropMultiple",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _addresses.length",
+    "loop postcondition": "i >= _addresses.length",
+    "loop invariant": "0 <= i && i <= _addresses.length"
+  },
+  {
+    "filename": "505.sol",
+    "function": "adminClaimAirdropMultiple",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _addresses.length",
+    "loop postcondition": "i >= _addresses.length",
+    "loop invariant": "0 <= i && i <= _addresses.length"
+  },
+  {
+    "filename": "5072.sol",
+    "function": "DistributeAirdropMultiple",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _addresses.length",
+    "loop postcondition": "i >= _addresses.length",
+    "loop invariant": "0 <= i && i <= _addresses.length"
+  },
+  {
+    "filename": "5355.sol",
+    "function": "mintTokensBatch",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < to.length",
+    "loop postcondition": "i >= to.length",
+    "loop invariant": "0 <= i && i <= to.length"
+  },
+  {
+    "filename": "5355.sol",
+    "function": "mintExtendedTokens",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < wallets.length && 0 satisfies k < wallets.length",
+    "loop postcondition": "i >= wallets.length && k >= wallets.length",
+    "loop invariant": "0 <= i && i <= wallets.length && 0 <= k && k <= wallets.length"
+  },
+  {
+    "filename": "5355.sol",
+    "function": "removeMilestone",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "number satisfies i < milestones.length - 1",
+    "loop postcondition": "i >= milestones.length - 1",
+    "loop invariant": "0 <= i && i <= milestones.length - 1"
+  },
+  {
+    "filename": "5355.sol",
+    "function": "insertMilestone",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "2 satisfies i > numberAfter",
+    "loop postcondition": "i <= numberAfter",
+    "loop invariant": "0 <= i && i <= numberAfter"
+  },
+  {
+    "filename": "5355.sol",
+    "function": "clearMilestones",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < milestones.length",
+    "loop postcondition": "i >= milestones.length",
+    "loop invariant": "0 <= i && i <= milestones.length"
+  },
+  {
+    "filename": "5355.sol",
+    "function": "currentMilestone",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i < milestones.length",
+    "loop postcondition": "i >= milestones.length",
+    "loop invariant": "0 <= i && i <= milestones.length"
+  },
+  {
+    "filename": "5374.sol",
+    "function": "bytesToAddres",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "20 satisfies i > 0",
+    "loop postcondition": "i <= 0",
+    "loop invariant": "0 <= i && i <= 0"
+  },
+  {
+    "filename": "5515.sol",
+    "function": "removeOwner",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i<owners.length - 1",
+    "loop postcondition": "i>=owners.length - 1",
+    "loop invariant": "0 <= i && i <= owners.length - 1"
+  },
+  {
+    "filename": "5515.sol",
+    "function": "replaceOwner",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i<owners.length",
+    "loop postcondition": "i>=owners.length",
+    "loop invariant": "0 <= i && i <= owners.length"
+  },
+  {
+    "filename": "5515.sol",
+    "function": "isConfirmed",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < owners.length",
+    "loop postcondition": "i >= owners.length",
+    "loop invariant": "0 <= i && i <= owners.length"
+  },
+  {
+    "filename": "5515.sol",
+    "function": "getConfirmationCount",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < owners.length",
+    "loop postcondition": "i >= owners.length",
+    "loop invariant": "0 <= i && i <= owners.length"
+  },
+  {
+    "filename": "5515.sol",
+    "function": "getTransactionCount",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < transactionCount",
+    "loop postcondition": "i >= transactionCount",
+    "loop invariant": "0 <= i && i <= transactionCount"
+  },
+  {
+    "filename": "5515.sol",
+    "function": "getConfirmations",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < owners.length && 0 satisfies i < count",
+    "loop postcondition": "i >= owners.length && i >= count",
+    "loop invariant": "0 <= i && i <= owners.length && 0 <= i && i <= count"
+  },
+  {
+    "filename": "5515.sol",
+    "function": "getTransactionIds",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < transactionCount && from satisfies i < to",
+    "loop postcondition": "i >= transactionCount && i >= to",
+    "loop invariant": "0 <= i && i <= transactionCount && 0 <= i && i <= to"
+  },
+  {
+    "filename": "5735.sol",
+    "function": "getValueAt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "max > min",
+    "loop postcondition": "!(max > min)",
+    "loop invariant": "max > min"
+  },
+  {
+    "filename": "5735.sol",
+    "function": "generateTokensByList",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _owners.length",
+    "loop postcondition": "i >= _owners.length",
+    "loop invariant": "0 <= i && i <= _owners.length"
+  },
+  {
+    "filename": "5766.sol",
+    "function": "addProtos",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < externalIDs.length",
+    "loop postcondition": "i >= externalIDs.length",
+    "loop invariant": "0 <= i && i <= externalIDs.length"
+  },
+  {
+    "filename": "5766.sol",
+    "function": "getRandomCard",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < mythic.length",
+    "loop postcondition": "i >= mythic.length",
+    "loop invariant": "0 <= i && i <= mythic.length"
+  },
+  {
+    "filename": "5766.sol",
+    "function": "transferAll",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < ids.length",
+    "loop postcondition": "i >= ids.length",
+    "loop invariant": "0 <= i && i <= ids.length"
+  },
+  {
+    "filename": "5766.sol",
+    "function": "ownsAll",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < ids.length",
+    "loop postcondition": "i >= ids.length",
+    "loop invariant": "0 <= i && i <= ids.length"
+  },
+  {
+    "filename": "5766.sol",
+    "function": "burnAll",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < ids.length",
+    "loop postcondition": "i >= ids.length",
+    "loop invariant": "0 <= i && i <= ids.length"
+  },
+  {
+    "filename": "5766.sol",
+    "function": "approveAll",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < ids.length",
+    "loop postcondition": "i >= ids.length",
+    "loop invariant": "0 <= i && i <= ids.length"
+  },
+  {
+    "filename": "5766.sol",
+    "function": "transferAllFrom",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < ids.length",
+    "loop postcondition": "i >= ids.length",
+    "loop invariant": "0 <= i && i <= ids.length"
+  },
+  {
+    "filename": "5766.sol",
+    "function": "_isApprovedPack",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < packs.length",
+    "loop postcondition": "i >= packs.length",
+    "loop invariant": "0 <= i && i <= packs.length"
+  },
+  {
+    "filename": "5766.sol",
+    "function": "claim",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "current satisfies i < end && 0 satisfies j < size",
+    "loop postcondition": "i >= end && j >= size",
+    "loop invariant": "0 <= i && i <= end && 0 <= j && j <= size"
+  },
+  {
+    "filename": "5766.sol",
+    "function": "predictPacks",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < count && 0 satisfies j < size",
+    "loop postcondition": "i >= count && j >= size",
+    "loop invariant": "0 <= i && i <= count && 0 <= j && j <= size"
+  },
+  {
+    "filename": "5766.sol",
+    "function": "isMinter",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < minters.length",
+    "loop postcondition": "i >= minters.length",
+    "loop invariant": "0 <= i && i <= minters.length"
+  },
+  {
+    "filename": "5792.sol",
+    "function": "pushTerms",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _array.length",
+    "loop postcondition": "i >= _array.length",
+    "loop invariant": "0 <= i && i <= _array.length"
+  },
+  {
+    "filename": "5792.sol",
+    "function": "calculateCommission",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < commissions.length",
+    "loop postcondition": "i >= commissions.length",
+    "loop invariant": "0 <= i && i <= commissions.length"
+  },
+  {
+    "filename": "58.sol",
+    "function": "getValueAt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "max > min",
+    "loop postcondition": "!(max > min)",
+    "loop invariant": "max > min"
+  },
+  {
+    "filename": "58.sol",
+    "function": "revokeAllTokenGrants",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < grantsCount",
+    "loop postcondition": "i >= grantsCount",
+    "loop invariant": "0 <= i && i <= grantsCount"
+  },
+  {
+    "filename": "58.sol",
+    "function": "transferableTokens",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < grantIndex",
+    "loop postcondition": "i >= grantIndex",
+    "loop invariant": "0 <= i && i <= grantIndex"
+  },
+  {
+    "filename": "58.sol",
+    "function": "lastTokenIsTransferableDate",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < grantIndex",
+    "loop postcondition": "i >= grantIndex",
+    "loop invariant": "0 <= i && i <= grantIndex"
+  },
+  {
+    "filename": "5811.sol",
+    "function": "addProtos",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < externalIDs.length",
+    "loop postcondition": "i >= externalIDs.length",
+    "loop invariant": "0 <= i && i <= externalIDs.length"
+  },
+  {
+    "filename": "5811.sol",
+    "function": "getRandomCard",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < mythic.length",
+    "loop postcondition": "i >= mythic.length",
+    "loop invariant": "0 <= i && i <= mythic.length"
+  },
+  {
+    "filename": "5811.sol",
+    "function": "transferAll",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < ids.length",
+    "loop postcondition": "i >= ids.length",
+    "loop invariant": "0 <= i && i <= ids.length"
+  },
+  {
+    "filename": "5811.sol",
+    "function": "ownsAll",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < ids.length",
+    "loop postcondition": "i >= ids.length",
+    "loop invariant": "0 <= i && i <= ids.length"
+  },
+  {
+    "filename": "5811.sol",
+    "function": "burnAll",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < ids.length",
+    "loop postcondition": "i >= ids.length",
+    "loop invariant": "0 <= i && i <= ids.length"
+  },
+  {
+    "filename": "5811.sol",
+    "function": "approveAll",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < ids.length",
+    "loop postcondition": "i >= ids.length",
+    "loop invariant": "0 <= i && i <= ids.length"
+  },
+  {
+    "filename": "5811.sol",
+    "function": "transferAllFrom",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < ids.length",
+    "loop postcondition": "i >= ids.length",
+    "loop invariant": "0 <= i && i <= ids.length"
+  },
+  {
+    "filename": "5811.sol",
+    "function": "_isApprovedPack",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < packs.length",
+    "loop postcondition": "i >= packs.length",
+    "loop invariant": "0 <= i && i <= packs.length"
+  },
+  {
+    "filename": "5811.sol",
+    "function": "claim",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "current satisfies i < end && 0 satisfies j < size",
+    "loop postcondition": "i >= end && j >= size",
+    "loop invariant": "0 <= i && i <= end && 0 <= j && j <= size"
+  },
+  {
+    "filename": "5811.sol",
+    "function": "predictPacks",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < count && 0 satisfies j < size",
+    "loop postcondition": "i >= count && j >= size",
+    "loop invariant": "0 <= i && i <= count && 0 <= j && j <= size"
+  },
+  {
+    "filename": "5880.sol",
+    "function": "pushTerms",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _array.length",
+    "loop postcondition": "i >= _array.length",
+    "loop invariant": "0 <= i && i <= _array.length"
+  },
+  {
+    "filename": "5880.sol",
+    "function": "calculateCommission",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < commissions.length",
+    "loop postcondition": "i >= commissions.length",
+    "loop invariant": "0 <= i && i <= commissions.length"
+  },
+  {
+    "filename": "6062.sol",
+    "function": "pushTerms",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _array.length",
+    "loop postcondition": "i >= _array.length",
+    "loop invariant": "0 <= i && i <= _array.length"
+  },
+  {
+    "filename": "6062.sol",
+    "function": "calculateCommission",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < commissions.length",
+    "loop postcondition": "i >= commissions.length",
+    "loop invariant": "0 <= i && i <= commissions.length"
+  },
+  {
+    "filename": "6485.sol",
+    "function": "addWhiteListed",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < addrs.length",
+    "loop postcondition": "i >= addrs.length",
+    "loop invariant": "0 <= i && i <= addrs.length"
+  },
+  {
+    "filename": "6485.sol",
+    "function": "sendBatchCS",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _values.length",
+    "loop postcondition": "i >= _values.length",
+    "loop invariant": "0 <= i && i <= _values.length"
+  },
+  {
+    "filename": "73.sol",
+    "function": "adminClaimAirdropMultiple",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _addresses.length",
+    "loop postcondition": "i >= _addresses.length",
+    "loop invariant": "0 <= i && i <= _addresses.length"
+  },
+  {
+    "filename": "7306.sol",
+    "function": "checkPosition",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "_a=1 satisfies _a<=_rate",
+    "loop postcondition": "_a>==_rate",
+    "loop invariant": "0 <= _a && _a <= _rate"
+  },
+  {
+    "filename": "7306.sol",
+    "function": "setIsAdmin",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i satisfies i < admins.length",
+    "loop postcondition": "i >= admins.length",
+    "loop invariant": "i < admins.length"
+  },
+  {
+    "filename": "7306.sol",
+    "function": "positionScount",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "_a=1 satisfies _a<=_rate",
+    "loop postcondition": "_a>==_rate",
+    "loop invariant": "0 <= _a && _a <= _rate"
+  },
+  {
+    "filename": "7306.sol",
+    "function": "batchTransfer",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _adds.length",
+    "loop postcondition": "i >= _adds.length",
+    "loop invariant": "0 <= i && i <= _adds.length"
+  },
+  {
+    "filename": "8297.sol",
+    "function": "append",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "len >= 32",
+    "loop postcondition": "len <== 32",
+    "loop invariant": "len >= 32"
+  },
+  {
+    "filename": "8297.sol",
+    "function": "parseAddr",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=2 satisfies i<2+2*20",
+    "loop postcondition": "i>=2+2*20",
+    "loop invariant": "0 <= i && i <= 2+2*20"
+  },
+  {
+    "filename": "8297.sol",
+    "function": "strCompare",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < minLength",
+    "loop postcondition": "i >= minLength",
+    "loop invariant": "0 <= i && i <= minLength"
+  },
+  {
+    "filename": "8297.sol",
+    "function": "indexOf",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < h.length && subindex < n.length && (i + subindex",
+    "loop postcondition": "i >= h.length && !(subindex < n.length && (i + subindex)",
+    "loop invariant": "0 <= i && i <= h.length && subindex < n.length && (i + subindex"
+  },
+  {
+    "filename": "8297.sol",
+    "function": "strConcat",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _ba.length && 0 satisfies i < _bb.length",
+    "loop postcondition": "i >= _ba.length && i >= _bb.length",
+    "loop invariant": "0 <= i && i <= _ba.length && 0 <= i && i <= _bb.length"
+  },
+  {
+    "filename": "8297.sol",
+    "function": "parseInt",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i<bresult.length",
+    "loop postcondition": "i>=bresult.length",
+    "loop invariant": "0 <= i && i <= bresult.length"
+  },
+  {
+    "filename": "8297.sol",
+    "function": "uint2str",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "j != 0 && i != 0",
+    "loop postcondition": "j == 0 && i == 0",
+    "loop invariant": "j != 0 && i != 0"
+  },
+  {
+    "filename": "8297.sol",
+    "function": "stra2cbor",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < arr.length",
+    "loop postcondition": "i >= arr.length",
+    "loop invariant": "0 <= i && i <= arr.length"
+  },
+  {
+    "filename": "8297.sol",
+    "function": "ba2cbor",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < arr.length",
+    "loop postcondition": "i >= arr.length",
+    "loop invariant": "0 <= i && i <= arr.length"
+  },
+  {
+    "filename": "8297.sol",
+    "function": "matchBytes32Prefix",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i< n_random_bytes",
+    "loop postcondition": "i>= n_random_bytes",
+    "loop invariant": "0 <= i && i <= n_random_bytes"
+  },
+  {
+    "filename": "8297.sol",
+    "function": "copyBytes",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i < (32 + fromOffset + length",
+    "loop postcondition": "!(i < (32 + fromOffset + length)",
+    "loop invariant": "i < (32 + fromOffset + length"
+  },
+  {
+    "filename": "8297.sol",
+    "function": "update",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "8297.sol",
+    "function": "updatePeriodically",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "8297.sol",
+    "function": "updateAfter",
+    "Arithmetic Vulnerable": "No",
+    "loop precondition": "",
+    "loop postcondition": "",
+    "loop invariant": ""
+  },
+  {
+    "filename": "8562.sol",
+    "function": "getIcoRuleList",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < count",
+    "loop postcondition": "i >= count",
+    "loop invariant": "0 <= i && i <= count"
+  },
+  {
+    "filename": "8562.sol",
+    "function": "tokenShareShow",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < count",
+    "loop postcondition": "i >= count",
+    "loop invariant": "0 <= i && i <= count"
+  },
+  {
+    "filename": "8562.sol",
+    "function": "getRemainShareAmountInternal",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < count && 0 satisfies i < count",
+    "loop postcondition": "i >= count && i >= count",
+    "loop invariant": "0 <= i && i <= count && 0 <= i && i <= count"
+  },
+  {
+    "filename": "8854.sol",
+    "function": "getMartialListInfo",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i<listedMartials.length",
+    "loop postcondition": "i>=listedMartials.length",
+    "loop invariant": "0 <= i && i <= listedMartials.length"
+  },
+  {
+    "filename": "8854.sol",
+    "function": "getMartialOwner",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i<listedMartials.length",
+    "loop postcondition": "i>=listedMartials.length",
+    "loop invariant": "0 <= i && i <= listedMartials.length"
+  },
+  {
+    "filename": "8854.sol",
+    "function": "getCanAttackMonsterIds",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i<listedEtherMonster.length",
+    "loop postcondition": "i>=listedEtherMonster.length",
+    "loop invariant": "0 <= i && i <= listedEtherMonster.length"
+  },
+  {
+    "filename": "8854.sol",
+    "function": "getOnSellCardIds",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i<listedCard.length",
+    "loop postcondition": "i>=listedCard.length",
+    "loop invariant": "0 <= i && i <= listedCard.length"
+  },
+  {
+    "filename": "8854.sol",
+    "function": "balanceOf",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < listedCard.length",
+    "loop postcondition": "i >= listedCard.length",
+    "loop invariant": "0 <= i && i <= listedCard.length"
+  },
+  {
+    "filename": "8854.sol",
+    "function": "tokensOf",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < listedCard.length",
+    "loop postcondition": "i >= listedCard.length",
+    "loop invariant": "0 <= i && i <= listedCard.length"
+  },
+  {
+    "filename": "9002.sol",
+    "function": "playBatch",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _betNums.length && _result",
+    "loop postcondition": "i >= _betNums.length && _result",
+    "loop invariant": "0 <= i && i <= _betNums.length && _result"
+  },
+  {
+    "filename": "9002.sol",
+    "function": "uintToString",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies j < i && v != 0",
+    "loop postcondition": "j >= i && v == 0",
+    "loop invariant": "0 <= j && j <= i && v != 0"
+  },
+  {
+    "filename": "9002.sol",
+    "function": "_openGameResult",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies nextRewardPlayNo < playNo && i < currentRewardNum",
+    "loop postcondition": "nextRewardPlayNo >= playNo && i < currentRewardNum",
+    "loop invariant": "0 <= i && i <= playNo && i < currentRewardNum"
+  },
+  {
+    "filename": "9002.sol",
+    "function": "noOpenGameResult",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies nextRewardPlayNo < playNo && i < currentRewardNum",
+    "loop postcondition": "nextRewardPlayNo >= playNo && i < currentRewardNum",
+    "loop invariant": "0 <= i && i <= playNo && i < currentRewardNum"
+  },
+  {
+    "filename": "965.sol",
+    "function": "bytesToAddress",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "20 satisfies i > 0",
+    "loop postcondition": "i <= 0",
+    "loop invariant": "0 <= i && i <= 0"
+  },
+  {
+    "filename": "9889.sol",
+    "function": "addAddresses",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < addrs.length",
+    "loop postcondition": "i >= addrs.length",
+    "loop invariant": "0 <= i && i <= addrs.length"
+  },
+  {
+    "filename": "9889.sol",
+    "function": "removeAddresses",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < addrs.length",
+    "loop postcondition": "i >= addrs.length",
+    "loop invariant": "0 <= i && i <= addrs.length"
+  },
+  {
+    "filename": "9889.sol",
+    "function": "multiMint",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < bits.length",
+    "loop postcondition": "i >= bits.length",
+    "loop invariant": "0 <= i && i <= bits.length"
+  },
+  {
+    "filename": "9889.sol",
+    "function": "walkTokenLots",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i=0 satisfies i<fromTokenLots.length",
+    "loop postcondition": "i>=fromTokenLots.length",
+    "loop invariant": "0 <= i && i <= fromTokenLots.length"
+  },
+  {
+    "filename": "9992.sol",
+    "function": "addWhiteListed",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < addrs.length",
+    "loop postcondition": "i >= addrs.length",
+    "loop invariant": "0 <= i && i <= addrs.length"
+  },
+  {
+    "filename": "9992.sol",
+    "function": "sendBatchCS",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "0 satisfies i < _values.length",
+    "loop postcondition": "i >= _values.length",
+    "loop invariant": "0 <= i && i <= _values.length"
+  }
+]

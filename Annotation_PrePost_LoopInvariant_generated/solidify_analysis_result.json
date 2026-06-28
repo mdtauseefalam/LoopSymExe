@@ -1,0 +1,98 @@
+[
+  {
+    "filename": "buggy_24.sol",
+    "function": "addInvestRecord",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 8 && i > 0",
+    "loop postcondition": "i == 0 && records[1..8] shifted from records[0..7]",
+    "loop invariant": "0 < i && i <= 8 && records[i] == old records[i-1] for all processed positions"
+  },
+  {
+    "filename": "buggy_24.sol",
+    "function": "addStaticCommissionRecord",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 8 && i > 0",
+    "loop postcondition": "i == 0 && records[1..8] shifted from records[0..7]",
+    "loop invariant": "0 < i && i <= 8 && records[i] == old records[i-1] for all processed positions"
+  },
+  {
+    "filename": "buggy_24.sol",
+    "function": "addDynamicCommissionRecord",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 8 && i > 0",
+    "loop postcondition": "i == 0 && records[1..8] shifted from records[0..7]",
+    "loop invariant": "0 < i && i <= 8 && records[i] == old records[i-1] for all processed positions"
+  },
+  {
+    "filename": "buggy_24.sol",
+    "function": "invest",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "addressWalker != GENESIS_USER_ADDRESS && sponsorAddress is valid",
+    "loop postcondition": "addressWalker == GENESIS_USER_ADDRESS && all ancestors updated",
+    "loop invariant": "addressWalker is a valid ancestor address in the sponsor chain"
+  },
+  {
+    "filename": "buggy_24.sol",
+    "function": "calcDynamicCommission",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && totalUserCount >= 0",
+    "loop postcondition": "i == totalUserCount && all users processed in each of the three passes",
+    "loop invariant": "0 <= i && i <= totalUserCount && depth >= 1 in inner while loop"
+  },
+  {
+    "filename": "buggy_24.sol",
+    "function": "calcDynamicCommissionBegin",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == index && index + length <= totalUserCount",
+    "loop postcondition": "i == index + length && calcDynamicCommissionAmount reset for all users in range",
+    "loop invariant": "index <= i && i <= index + length"
+  },
+  {
+    "filename": "buggy_24.sol",
+    "function": "calcDynamicCommissionRange",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == index && index + length <= totalUserCount",
+    "loop postcondition": "i == index + length && all eligible users in range processed",
+    "loop invariant": "index <= i && i <= index + length && depth >= 1 in inner while loop"
+  },
+  {
+    "filename": "buggy_24.sol",
+    "function": "calcDynamicCommissionEnd",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == index && index + length <= totalUserCount",
+    "loop postcondition": "i == index + length && dynamicCommissionBalance updated for qualifying users",
+    "loop invariant": "index <= i && i <= index + length"
+  },
+  {
+    "filename": "buggy_25.sol",
+    "function": "givePrizeMoney",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && betList[_fixtureId].length > 0",
+    "loop postcondition": "i == betList[_fixtureId].length && all winning bets transferred",
+    "loop invariant": "0 <= i && i <= betList[_fixtureId].length && returnEth == (stake * odd) / 1000 for current entry"
+  },
+  {
+    "filename": "buggy_29.sol",
+    "function": "buyRaffle",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && amounts.length == listingIds.length && amounts.length > 0",
+    "loop postcondition": "i == listingIds.length && totalAmount and totalAmountPayed fully accumulated",
+    "loop invariant": "0 <= i && i <= listingIds.length && totalAmountPayed <= msg.value && totalAmount >= 0"
+  },
+  {
+    "filename": "buggy_43.sol",
+    "function": "_combineMultiHash",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && out.length == 34",
+    "loop postcondition": "i == 32 && out[2..33] populated from multihash.hash[0..31]",
+    "loop invariant": "0 <= i && i <= 32 && out[i+2] == multihash.hash[i] for all processed i"
+  },
+  {
+    "filename": "buggy_44.sol",
+    "function": "_combineMultiHash",
+    "Arithmetic Vulnerable": "Yes",
+    "loop precondition": "i == 0 && out.length == 34",
+    "loop postcondition": "i == 32 && out[2..33] populated from multihash.hash[0..31]",
+    "loop invariant": "0 <= i && i <= 32 && out[i+2] == multihash.hash[i] for all processed i"
+  }
+]
